@@ -6,7 +6,7 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: "Poppins", sans-serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 :root {
@@ -41,7 +41,7 @@ body{
 }
 
 .logo{
-    font-size: 3rem;
+    font-size: 5rem;
     color: var(--text-color);
     font-weight: 800;
     cursor: pointer;
@@ -96,6 +96,10 @@ section{
     text-align: left;
     justify-content: center;
     margin-top: 3rem;
+}
+
+.home-content h2{
+    font-size: 5rem;
 }
 
 span{
@@ -194,6 +198,7 @@ span{
     display: flex;
     align-items: center;
     gap: 2.5rem;
+    
 }
 
 .btn-group a:nth-of-type(2){
