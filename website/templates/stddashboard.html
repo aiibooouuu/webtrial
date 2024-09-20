@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webpage Layout</title>
-    <link rel="stylesheet" href="stddashboard.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='stddashboard.css')}}">
 </head>
 <body>
     <header class="header">
@@ -40,15 +40,17 @@
          
         <div class="second-section">
             <div class="small">
-                <h3>Available Courses</h3>
-                <p class="info">Click here to view your courses</p>
-                
+                <a href="/student-courses" style="text-decoration: none; color: inherit;">
+                    <h3>Available Courses</h3>
+                    <p class="info">Click here to view your courses</p>
+                </a>
             </div>
             <div class="small">
-                <h3>Mentor</h3>
-                <p class="info">Click here to contact with experts
-                     of your intrested field</p>
-                
+                <a href="/student-mentors" style="text-decoration: none; color: inherit;">
+                    <h3>Mentor</h3>
+                    <p class="info">Click here to contact with experts
+                        of your intrested field</p>
+                </a>
             </div>
             <div class="small">
                 <h3>Roadmap</h3>
