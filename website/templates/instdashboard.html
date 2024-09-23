@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage Layout</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'instdashboard.css')}}">
+</head>
+<body>
+    <header class="header">
+        <a href="#home" class="logo">TICK MY
+            <span>WAY</span>
+        </a>
+    
+        <i class='bx bx-menu' id="menu-icon"></i>
+    <nav class="navbar">
+        <a href="#home" class="active">HOME</a>
+        <a href="#education" >EDUCATION</a>
+        <a href="#services" >SERVICES</a>
+        <a href="#testimonials">TESTIMONIALS</a>
+        <a href="#contact" >CONTACT</a>
+    </nav>
+    </header>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br>
+    <div class="text-image-wrapper">
+        <div class="text-section">
+            <h2>Hello Instructor</h2>
+            
+        </div>
+        <div class="image-section">
+            <img src="pfp.jpg" alt="Example Image">
+        </div>
+    </div>
+
+    <div class="image-grid-wrapper">
+        <!-- Text Section -->
+        <h2> My Courses</h2>
+
+        <!-- Image Grid Section -->
+        <div class="image-grid">
+            <img class="imgcourse" src="s1.jpg" alt="Image 1">
+            <img class="imgcourse" src="s2.jpg" alt="Image 2">
+            <img class="imgcourse" src="s3.jpg" alt="Image 3">
+            <img class="imgcourse" src="s4.jpg" alt="Image 4">
+            <img class="imgcourse" src="s5.jpg" alt="Image 5">
+            <img class="imgcourse" src="s6.jpg" alt="Image 6">
+            
+            <img class="imgcourse" id ="plus" src="plus.png" alt="Image 6">
+        </div>
+    </div>
+    </section>
+</body>
+</html>
