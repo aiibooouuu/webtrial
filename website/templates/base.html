@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block css %}{% endblock css %}
+    {% if title %}
+        <title>Tick My Way - {{title}}</title>
+    {% else %}
+        <title>Tick My Way</title>
+    {% endif %}
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="/" class="logo">TICK MY
+            <span>WAY</span>
+        </a>
+    
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="/" class="active">HOME</a>
+            <a href="#education" >EDUCATION</a>
+            <a href="#services" >SERVICES</a>
+            <a href="#testimonials">TESTIMONIALS</a>
+            <a href="#contact" >CONTACT</a>
+        </nav>
+    </header>
+    {% block content %}{% endblock content%}
+    <script src="{{ url_for('static', filename='script.js')}}"></script>
+</body>
+</html>

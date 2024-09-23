@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Lora');
+
 *{
     margin: 0;
     padding: 0;
@@ -6,7 +8,7 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: "Poppins", sans-serif;
+    font-family:'Lora';
 }
 
 :root {
@@ -41,7 +43,7 @@ body{
 }
 
 .logo{
-    font-size: 3rem;
+    font-size: 5rem;
     color: var(--text-color);
     font-weight: 800;
     cursor: pointer;
@@ -96,6 +98,10 @@ section{
     text-align: left;
     justify-content: center;
     margin-top: 3rem;
+}
+
+.home-content h2{
+    font-size: 5rem;
 }
 
 span{
@@ -194,6 +200,7 @@ span{
     display: flex;
     align-items: center;
     gap: 2.5rem;
+    
 }
 
 .btn-group a:nth-of-type(2){
@@ -243,22 +250,25 @@ span{
 }
 
 @keyframes words{
-    
+    0%,
+    20%{
+        content: "Accountant";
+    }
     21%,
     40%{
-        content: "Web Developer";
+        content: "Programmer";
     }
     41%,
     60%{
-        content: "UI / UX Designer";
+        content: "Musician";
     }
     61%,
     80%{
-        content: "Web Designer";
+        content: "Entrepeneur";
     }
     81%,
     100%{
-        content: "Software Tester";
+        content: "Artist";
     }
 }
 

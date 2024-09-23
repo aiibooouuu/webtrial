@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block content %}
+    <section class="testimonials" id="testimonials">
+        <div class="testimonials-box">
+            <h2 class="heading"></h2>
+
+            <div class="wrapper">
+                    <div class="testimonials-item">
+                        <img src="pfp1.jpg" alt="">
+                        <h2>Mentor 1</h2>
+                        <div claass="rating">
+                            <i class='bx bxs-star' id="star"></i>
+                            <i class='bx bxs-star' id="star"></i>
+                            <i class='bx bxs-star' id="star"></i>
+                            <i class='bx bxs-star' id="star"></i>
+                            <i class='bx bxs-star' id="star"></i>
+                        </div>
+                        <p>Lorem ipsum dolor, sit amet consectetur
+                        adipisicing elit. Quia, odit eum, voluptatum
+                        officia earum ipsa ipsam enim totam ut 
+                        dolore magni nam adipisci natus, 
+                        consequuntur labore debitis repudiandae 
+                        commodi excepturi?</p>
+                    </div>
+
+                    <div class="testimonials-item">
+                        <img src="pfp1.jpg" alt="">
+                        <h2>Mentor 2</h2>
+                        <div claass="rating">
+                            <i class='bx bxs-star' id="star"></i>
+                            <i class='bx bxs-star' id="star"></i>
+                            <i class='bx bxs-star' id="star"></i>
+                            <i class='bx bxs-star' id="star"></i>
+                            <i class='bx bxs-star' id="star"></i>   
+                        </div>
+                        <p>Lorem ipsum dolor, sit amet consectetur
+                        adipisicing elit. Quia, odit eum, voluptatum
+                        officia earum ipsa ipsam enim totam ut 
+                        dolore magni nam adipisci natus, 
+                        consequuntur labore debitis repudiandae 
+                        commodi excepturi?</p>
+                    </div>
+
+                    <div class="testimonials-item">
+                        <img src="pfp1.jpg" alt="">
+                        <h2>Mentor 3</h2>
+                        <div claass="rating">
+                            <i class='bx bxs-star' id="star"></i>
+                            <i class='bx bxs-star' id="star"></i>
+                            <i class='bx bxs-star' id="star"></i>
+                            <i class='bx bxs-star' id="star"></i>
+                            <i class='bx bxs-star' id="star"></i>
+                        </div>
+                        <p>Lorem ipsum dolor, sit amet consectetur
+                        adipisicing elit. Quia, odit eum, voluptatum
+                        officia earum ipsa ipsam enim totam ut 
+                        dolore magni nam adipisci natus, 
+                        consequuntur labore debitis repudiandae 
+                        commodi excepturi?</p>
+                    </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}
+{% block css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='mentor.css')}}">
+{% endblock css %}

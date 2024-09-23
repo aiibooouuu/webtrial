@@ -1,0 +1,225 @@
+{% extends "base.html" %}
+{% block css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+{% endblock css %}
+{% block content %}
+    <section class="home"id="home">
+        <div class="home-content">
+            <h2>  Ways to your Goals are <br  ><span> LIMITLESS</span></h2>
+            <h4 class="text-animation">I'm a <span></span></h4>
+
+            <br> <br> <br>
+            <p> Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Cumque nobis perferendis, 
+                tempora est iste maxime? Consectetur iste alias ad?
+                Nemo maxime qui ullam quasi iusto ipsum accusamus 
+                autem culpa nostrum.
+            </p>
+            <br>
+            <!-- <div class="social-icons">
+                <a href="#"><i class='bx bx-link' ></i></a> &nbsp &nbsp
+                <a href="#"><i class='bx bxs-phone-call' ></i></a> &nbsp &nbsp
+                <a href="#"><i class='bx bxs-phone-call' ></i></a> &nbsp &nbsp
+                <a href="#"><i class='bx bxs-phone-call' ></i></a> &nbsp &nbsp
+            </div> -->
+            <br>
+            <div class="btn-grp">
+                <a href="/login-student" class="btn"> Login as a STUDENT </a> &nbsp &nbsp
+                <a href="/login-instructor" class="btn"> Login as a INSTRUCTOR </a>
+            </div>
+            </div>
+            <div class="home-img">
+                <img src="{{ url_for('static', filename='img.webp') }}" alt="image">
+            
+        </div>
+    </section>
+
+    <section class="education" id="education">
+        <h2 class="heading">Education</h2>
+        <div class="timeline-items">
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                    <div class="timeline-date"> 2021</div> <br>
+                    <div class="timeline-content">
+                    <h3>High School</h3>
+                    <p> Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Ratione nemo velit soluta 
+                    voluptatibus quasi dicta consequuntur. Id sequi
+                    sint eius quas, ullam rerum quo porro blanditiis 
+                    explicabo nobis error animi.</p>
+                    </div>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                    <div class="timeline-date"> 2022</div><br>
+                    <div class="timeline-content">
+                    <h3>University </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Ratione nemo velit soluta 
+                    voluptatibus quasi dicta consequuntur. Id sequi
+                    sint eius quas, ullam rerum quo porro blanditiis 
+                    explicabo nobis error animi.</p>
+                    </div>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                    <div class="timeline-date"> 2023</div><br>
+                    <div class="timeline-content">
+                    <h3> Internship</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Ratione nemo velit soluta 
+                    voluptatibus quasi dicta consequuntur. Id sequi
+                    sint eius quas, ullam rerum quo porro blanditiis 
+                    explicabo nobis error animi.</p>
+                    </div>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                    <div class="timeline-date"> 2024</div><br> 
+                    <div class="timeline-content">
+                    <h3>Job</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Ratione nemo velit soluta 
+                    voluptatibus quasi dicta consequuntur. Id sequi
+                    sint eius quas, ullam rerum quo porro blanditiis 
+                    explicabo nobis error animi.</p>
+                    </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2 class="heading">Services</h2>
+
+        <div class="services-container">
+
+            <div class="service-box">
+                <div class="service-info">
+                    <h4> UI Design</h4>
+                    <p> Lorem ipsum dolor sit, amet consectetur
+                        adipisicing elit. Eos, accusantium iure. 
+                        Veritatis magni saepe adipisci quas qui 
+                        incidunt officia dolore, dignissimos, 
+                        quae odit quaerat facilis obcaecati animi
+                        ut laboriosam sint.      
+                </div>
+            </div>
+            
+                
+            <div class="service-box">
+                <div class="service-info">
+                    <h4> Front End Dveloper</h4>
+                    <p> Lorem ipsum dolor sit, amet consectetur
+                        adipisicing elit. Eos, accusantium iure. 
+                        Veritatis magni saepe adipisci quas qui 
+                        incidunt officia dolore, dignissimos, 
+                        quae odit quaerat facilis obcaecati animi
+                        ut laboriosam sint.      
+                </div>
+            </div>
+        
+            <div class="service-box">
+                <div class="service-info">
+                    <h4> BackEnd Dev</h4>
+                    <p> Lorem ipsum dolor sit, amet consectetur
+                        adipisicing elit. Eos, accusantium iure. 
+                        Veritatis magni saepe adipisci quas qui 
+                        incidunt officia dolore, dignissimos, 
+                        quae odit quaerat facilis obcaecati animi
+                        ut laboriosam sint.      
+                </div>
+            </div>
+        
+            <div class="service-box">
+                <div class="service-info">
+                    <h4> Testing</h4>
+                    <p> Lorem ipsum dolor sit, amet consectetur
+                        adipisicing elit. Eos, accusantium iure. 
+                        Veritatis magni saepe adipisci quas qui 
+                        incidunt officia dolore, dignissimos, 
+                        quae odit quaerat facilis obcaecati animi
+                        ut laboriosam sint.      
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <div class="testimonials-box">
+            <h2 class="heading">MENTORS</h2>
+
+            <div class="wrapper">
+                    <div class="testimonials-item">
+                        <img src="{{ url_for('static', filename='2.jpg')}}" alt="">
+                        <h2>Mentor1</h2>
+                        <div claass="rating">
+                            <i class='bx bxs-star' id="star"></i>
+                            <i class='bx bxs-star' id="star"></i>
+                            <i class='bx bxs-star' id="star"></i>
+                            <i class='bx bxs-star' id="star"></i>
+                            <i class='bx bxs-star' id="star"></i>
+                        </div>
+                        <p>Lorem ipsum dolor, sit amet consectetur
+                        adipisicing elit. Quia, odit eum, voluptatum
+                        officia earum ipsa ipsam enim totam ut 
+                        dolore magni nam adipisci natus, 
+                        consequuntur labore debitis repudiandae 
+                        commodi excepturi?</p>
+                    </div>
+
+                    <div class="testimonials-item">
+                        <img src="{{ url_for('static', filename='3.jpg')}}" alt="">
+                        <h2>Mentor2</h2>
+                        <div claass="rating">
+                            <i class='bx bxs-star' id="star"></i>
+                            <i class='bx bxs-star' id="star"></i>
+                            <i class='bx bxs-star' id="star"></i>
+                            <i class='bx bxs-star' id="star"></i>
+                            <i class='bx bxs-star' id="star"></i>   
+                        </div>
+                        <p>Lorem ipsum dolor, sit amet consectetur
+                        adipisicing elit. Quia, odit eum, voluptatum
+                        officia earum ipsa ipsam enim totam ut 
+                        dolore magni nam adipisci natus, 
+                        consequuntur labore debitis repudiandae 
+                        commodi excepturi?</p>
+                    </div>
+
+                    <div class="testimonials-item">
+                        <img src="{{ url_for('static', filename='4.jpg')}}" alt="">
+                        <h2>Mentor3</h2>
+                        <div claass="rating">
+                            <i class='bx bxs-star' id="star"></i>
+                            <i class='bx bxs-star' id="star"></i>
+                            <i class='bx bxs-star' id="star"></i>
+                            <i class='bx bxs-star' id="star"></i>
+                            <i class='bx bxs-star' id="star"></i>
+                        </div>
+                        <p>Lorem ipsum dolor, sit amet consectetur
+                        adipisicing elit. Quia, odit eum, voluptatum
+                        officia earum ipsa ipsam enim totam ut 
+                        dolore magni nam adipisci natus, 
+                        consequuntur labore debitis repudiandae 
+                        commodi excepturi?</p>
+                    </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

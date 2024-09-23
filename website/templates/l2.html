@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructor-Login page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='l1.css')}}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="/instructor-dashboard" method="GET">
+            <h1>LOGIN as a Teacher</h1>
+            <div class="input-box">
+                <input type="text" placeholder="username                
+                                          👤" required>
+                
+            </div>
+
+            <div class="input-box">
+                <input type="password" placeholder="password                    
+                                        🔐" required>
+                
+            </div>
+
+            <div class="input-box">
+                <input type="text" placeholder="Instructor I'd                
+                                    🗝️" required>
+                
+            </div>
+
+            <div class="remember-forgot">
+                <label> <input type="checkbox"> Remember me</label>
+                <a href="#"> Forget Password?</a>
+            </div>
+            <button type="submit"class="btn"> Login</button>
+            <div class="register-link">
+                <p>Dont have an account?
+                    <a href="#"> Register</a>
+                </p>
+            </div>
+        </form>
+
+    </div>
+    
+</body>
+</html>
