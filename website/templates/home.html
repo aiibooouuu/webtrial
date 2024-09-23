@@ -1,28 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Respoonsive web</title>
+{% extends "base.html" %}
+{% block css %}
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
-<body>
-    <header class="header">
-        <a href="#home" class="logo">TICK MY
-            <span>WAY</span>
-        </a>
-    
-        <i class='bx bx-menu' id="menu-icon"></i>
-    <nav class="navbar">
-        <a href="#home" class="active">HOME</a>
-        <a href="#education" >EDUCATION</a>
-        <a href="#services" >SERVICES</a>
-        <a href="#testimonials">TESTIMONIALS</a>
-        <a href="#contact" >CONTACT</a>
-    </nav>
-    </header>
-
+{% endblock css %}
+{% block content %}
     <section class="home"id="home">
         <div class="home-content">
             <h2>  Ways to your Goals are <br  ><span> LIMITLESS</span></h2>
@@ -53,7 +33,7 @@
             
         </div>
     </section>
-    
+
     <section class="education" id="education">
         <h2 class="heading">Education</h2>
         <div class="timeline-items">
@@ -134,11 +114,11 @@
                 <div class="service-info">
                     <h4> UI Design</h4>
                     <p> Lorem ipsum dolor sit, amet consectetur
-                         adipisicing elit. Eos, accusantium iure. 
-                         Veritatis magni saepe adipisci quas qui 
-                         incidunt officia dolore, dignissimos, 
-                         quae odit quaerat facilis obcaecati animi
-                          ut laboriosam sint.      
+                        adipisicing elit. Eos, accusantium iure. 
+                        Veritatis magni saepe adipisci quas qui 
+                        incidunt officia dolore, dignissimos, 
+                        quae odit quaerat facilis obcaecati animi
+                        ut laboriosam sint.      
                 </div>
             </div>
             
@@ -147,35 +127,35 @@
                 <div class="service-info">
                     <h4> Front End Dveloper</h4>
                     <p> Lorem ipsum dolor sit, amet consectetur
-                         adipisicing elit. Eos, accusantium iure. 
-                         Veritatis magni saepe adipisci quas qui 
-                         incidunt officia dolore, dignissimos, 
-                         quae odit quaerat facilis obcaecati animi
-                          ut laboriosam sint.      
+                        adipisicing elit. Eos, accusantium iure. 
+                        Veritatis magni saepe adipisci quas qui 
+                        incidunt officia dolore, dignissimos, 
+                        quae odit quaerat facilis obcaecati animi
+                        ut laboriosam sint.      
                 </div>
             </div>
-           
+        
             <div class="service-box">
                 <div class="service-info">
                     <h4> BackEnd Dev</h4>
                     <p> Lorem ipsum dolor sit, amet consectetur
-                         adipisicing elit. Eos, accusantium iure. 
-                         Veritatis magni saepe adipisci quas qui 
-                         incidunt officia dolore, dignissimos, 
-                         quae odit quaerat facilis obcaecati animi
-                          ut laboriosam sint.      
+                        adipisicing elit. Eos, accusantium iure. 
+                        Veritatis magni saepe adipisci quas qui 
+                        incidunt officia dolore, dignissimos, 
+                        quae odit quaerat facilis obcaecati animi
+                        ut laboriosam sint.      
                 </div>
             </div>
-           
+        
             <div class="service-box">
                 <div class="service-info">
                     <h4> Testing</h4>
                     <p> Lorem ipsum dolor sit, amet consectetur
-                         adipisicing elit. Eos, accusantium iure. 
-                         Veritatis magni saepe adipisci quas qui 
-                         incidunt officia dolore, dignissimos, 
-                         quae odit quaerat facilis obcaecati animi
-                          ut laboriosam sint.      
+                        adipisicing elit. Eos, accusantium iure. 
+                        Veritatis magni saepe adipisci quas qui 
+                        incidunt officia dolore, dignissimos, 
+                        quae odit quaerat facilis obcaecati animi
+                        ut laboriosam sint.      
                 </div>
             </div>
         </div>
@@ -242,8 +222,4 @@
             </div>
         </div>
     </section>
-
-    <script src="{{ url_for('static', filename='script.js')}}"></script>
-
-</body>
-</html>
+{% endblock content %}
