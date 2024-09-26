@@ -1,10 +1,16 @@
 from flask import Blueprint, render_template
+from website.forms import RegistrationForm  # Assuming RegistrationForm is the class in forms.py
+
 
 auth = Blueprint('auth', __name__)
 
 @auth.route('/login-student')
 def login_student():
-    return render_template("l1.html")
+    form = RegistrationForm()
+    if form.validate_on_submit():
+        flash(f'Account Created for {form.username.data}!', 'success')
+        return redirect(url_for('home'))
+    return render_template("login-layout.html", count=128, form=form)
 
 @auth.route('/login-instructor')
 def login_instructor():
