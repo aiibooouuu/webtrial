@@ -1,4 +1,5 @@
 from flask import Flask
+from website.forms import RegistrationForm, LoginForm
 
 def create_app():
     app = Flask(__name__)
