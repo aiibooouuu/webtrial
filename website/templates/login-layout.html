@@ -12,29 +12,33 @@
     {% for _ in range(count) %}
       <span></span>
     {% endfor %}
-
-    <div class="signin">
-      <div class="content">
-        <h2>Sign In as Student</h2>
-        <div class="form">
-          <div class="inputBox">
-            {{ form.email(class="form-control", placeholder="") }}
-            <i>Email 👤</i>
-          </div>
-          <div class="inputBox">
-            {{ form.password(class='form-control')}}
-            <i>Password  🔒</i>
-          </div>
-          <div class="links">
-            <a href="#">Forgot Password</a>
-            <a href="#">Register</a>
-          </div>
-          <div class="inputBox">
-            <input type="submit" value="Login">
-          </div>
+</section>
+<section>
+<form method='POST' action=''>
+  {{ form.hidden_tag() }}
+  <div class="signin">
+    <div class="content">
+      <h2>Sign In as Student</h2>
+      <div class="form">
+        <div class="inputBox">
+          {{ form.email(class="form-control", placeholder="") }}
+          <i>Email 👤</i>
+        </div>
+        <div class="inputBox">
+          {{ form.password(class='form-control')}}
+          <i>Password  🔒</i>
+        </div>
+        <div class="links">
+          <a href="#">Forgot Password</a>
+          <a href="#">Register</a>
+        </div>
+        <div class="inputBox">
+          {{ form.submit(class='btn')}}
         </div>
       </div>
     </div>
+  </div>
+</form>
 </section>
 <!-- partial -->
   
