@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>loginstd</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='signinstd.css')}}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<section>
+    {% for _ in range(count) %}
+      <span class='box'></span>
+    {% endfor %}
+</section>
+<section>
+<form method='POST' action='' class='center-content'>
+  {{ form.hidden_tag() }}
+  <div class="signin">
+    <div class="content">
+      <h2>Sign In as Student</h2>
+      <div class="form">
+        <div class="inputBox">
+          {% if form.email.errors %}
+            {{ form.email(class="form-control is-invalid", placeholder="") }}
+            <i>Email 👤</i>
+            <div class='error-message'>
+              {% for error in form.email.errors%}
+                <span>{{ error }}</span>
+              {% endfor%}
+            </div>
+          {% else %}
+            {{ form.email(class='form-control')}}
+          {% endif%}
+        </div>
+        <div class="inputBox">
+          {% if form.password.errors %}
+            {{ form.password(class='form-control is-invalid')}}
+            <i>Password  🔒</i>
+            <div class='error-message'>
+              {% for error in form.password.errors %}
+                <span>{{ error }}</span>
+              {% endfor %}
+            </div>
+          {% else %}
+            {{ form.password(class='form-control')}}
+          {% endif %}
+        </div>
+        <div class="links">
+          <a href="#">Forgot Password</a>
+          <a href="#">Register</a>
+        </div>
+        <div class="inputBox">
+          {{ form.submit(class='btn')}}
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+</section>
+<!-- partial -->
+  
+</body>
+</html>
