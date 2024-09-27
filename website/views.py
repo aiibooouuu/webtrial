@@ -1,4 +1,5 @@
 from flask import Blueprint, render_template
+from website.forms import RegistrationForm, LoginForm
 
 views = Blueprint('views', __name__)
 
@@ -8,7 +9,8 @@ def home():
 
 @views.route('/student-dashboard')
 def std_dashboard():
-    return render_template('student-dashboard.html', title="Welcome Student")
+    form = LoginForm()
+    return render_template('student-dashboard.html', title="Welcome Student", form=form)
 
 @views.route('/instructor-dashboard')
 def inst_dashboard():
