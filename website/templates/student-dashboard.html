@@ -1,26 +1,161 @@
 {% extends "base.html" %}
 {% block css %}
-    <link rel="stylesheet" href="{{url_for('static', filename='stddashboard.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stddashboard.css') }}">
 {% endblock css %}
+
 {% block content %}
-    </header>
-    <br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br>
+    <div class="dashboard-wrapper">
+        <header>
+            <div class="header-content">
+                <h2>Hello Student</h2>
+            </div>
+        </header>
 
-
-        
-        
         <div class="text-image-wrapper">
             <div class="text-section">
-                <h2>Hello Student</h2>
-                
+                <p>Welcome to your dashboard.</p>
             </div>
             <div class="image-section">
-                <img src="pfp.jpg" alt="Example Image">
+                <img src="{{ url_for('static', filename='pfp.jpg') }}" alt="Profile Picture">
             </div>
         </div>
 
-        
+        <div class="abu">
+            <div class="card">
+                <!-- Header Section -->
+                <header>
+                    <div class="time">00:00</div>
+                    <div class="icons">
+                        <div class="app-icon">📚</div>
+                        <div class="streak-icon">🔗</div>
+                    </div>
+                </header>
+
+                <!-- Days Section -->
+                <div class="days">
+                    <div class="day">F</div>
+                    <div class="day">S</div>
+                    <div class="day">S</div>
+                    <div class="day active">M</div>
+                    <div class="day active">T</div>
+                    <div class="day active">W</div>
+                    <div class="day active">T</div>
+                </div>
+
+                <!-- Stats Section -->
+                <section class="stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">⏱️</div>
+                        <div class="stat-info">
+                            <p class="stat-number">8 hours</p>
+                            <p class="stat-label">Total practiced</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📊</div>
+                        <div class="stat-info">
+                            <p class="stat-number">13</p>
+                            <p class="stat-label">Total sessions</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">😊</div>
+                        <div class="stat-info">
+                            <p class="stat-number">3.3</p>
+                            <p class="stat-label">Average mood</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⚡</div>
+                        <div class="stat-info">
+                            <p class="stat-number">2.8</p>
+                            <p class="stat-label">Average focus</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Activity Section -->
+                <section class="activity">
+                    <h2>Activity</h2>
+                    <div class="calendar">
+                        <div class="box">
+                            <div class="month">Nov 2023</div>
+                            <div class="month">Dec 2023</div>
+                            <div class="month">Jan 2024</div>
+                        </div>
+                        <div class="days-grid">
+                            <!-- Example day structure -->
+                            <div class="day-square active"></div>
+                            <div class="day-square active"></div>
+                            <div class="day-square"></div>
+                            <div class="day-square"></div>
+                            <div class="day-square active"></div>
+                            <div class="day-square active"></div>
+                            <div class="day-square"></div>
+                            <!-- Continue for the full calendar -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Platinum Count Section -->
+                <section class="money">
+                    <div class="moneys">
+                        <div class="money-sec">
+                            <div class="m"><img src="{{ url_for('static', filename='money.png') }}" height="50px" alt="Money Icon"></div>
+                            <div class="m"><p>Platinum Count</p></div>
+                        </div>
+                        <div class="m1"><p>🪙 300</p></div>
+                    </div>
+
+                    <div class="progressbar">
+                        <div class="progress-container">
+                            <progress id="progress-bar" value="40" max="100"></progress>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Course Progress Section -->
+        <div class="cardprogress">
+            <section class="progresscourse">
+                <div class="progressbox">
+                    <div class="progresstitle">
+                        COURSE PROGRESS 📊
+                    </div>
+                    <div class="progress-container1">
+                        Course 1 <br>
+                        <progress id="progress-bar1" value="40" max="100"></progress>
+                    </div>
+                    <div class="progress-container1">
+                        Course 2 <br>
+                        <progress id="progress-bar2" value="70" max="100"></progress>
+                    </div>
+                    <div class="progress-container1">
+                        Course 3 <br>
+                        <progress id="progress-bar3" value="10" max="100"></progress>
+                    </div>
+                    <div class="progress-container1">
+                        Course 4 <br>
+                        <progress id="progress-bar4" value="20" max="100"></progress>
+                    </div>
+                    <div class="progress-container1">
+                        Course 5 <br>
+                        <progress id="progress-bar5" value="90" max="100"></progress>
+                    </div>
+                    <div class="progress-container1">
+                        Course 6 <br>
+                        <progress id="progress-bar6" value="55" max="100"></progress>
+                    </div>
+                    <div class="progress-container1">
+                        Course 7 <br>
+                        <progress id="progress-bar7" value="40" max="100"></progress>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Additional Sections -->
         <div class="second-section">
             <div class="small">
                 <a href="/student-courses" style="text-decoration: none; color: inherit;">
@@ -31,18 +166,13 @@
             <div class="small">
                 <a href="/student-mentors" style="text-decoration: none; color: inherit;">
                     <h3>Mentor</h3>
-                    <p class="info">Click here to contact with experts
-                        of your intrested field</p>
+                    <p class="info">Click here to contact experts in your field</p>
                 </a>
             </div>
             <div class="small">
                 <h3>Roadmap</h3>
-                <p class="info">Click here to find roadmaps of
-                    people who acheived the same 
-                    dream as yours</p>
-                
+                <p class="info">Click here to find roadmaps of people who achieved the same dream as yours</p>
             </div>
         </div>
-        
-    </section>
+    </div>
 {% endblock content %}

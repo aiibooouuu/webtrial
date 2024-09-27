@@ -331,3 +331,408 @@ body {
     align-self:baseline;
     font-size: 14px;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.time {
+    font-size: 1.5rem;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+}
+
+.app-icon, .streak-icon {
+    font-size: 1.5rem;
+}
+
+/* Days */
+.days {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    background-color: #2a2a2a;
+    border-radius: 15px;
+    height: 50px;
+}
+
+.day {
+    display: grid;
+    font-size: 1.4rem;
+    padding: 5px;
+    font-weight: 600;
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+}
+
+.day.active {
+    color: red;
+    font-weight: 600;
+    align-self: center;
+}
+
+/* Stats Section */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stat-icon {
+    font-size: 2rem;
+}
+
+.stat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+/* Activity Section */
+.activity {
+    margin-bottom: 20px;
+    background-color:#2a2a2a;
+    padding: 5px;
+    border-radius: 15px;
+    
+}
+
+.activity h2 {
+    margin-bottom: 10px;
+}
+
+.calendar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    padding: 5px;
+}
+
+.month {
+    color: #aaa;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.days-grid {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    gap: 3px;
+}
+
+.day-square {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 3px;
+}
+
+.day-square.active {
+    background-color: #6bff86;
+}
+
+.box{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.money{
+    margin-bottom: 20px;
+    background-color:#2a2a2a;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.money-sec{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: px;
+}
+
+.money-p{
+    align-content: flex-end;
+    font-weight: 600;
+}
+
+.money-balance{
+    margin-right: 50px;
+}
+
+.m{
+    display: flex;
+    flex-direction: row;
+    font-size: 1rem;
+    
+}
+
+.moneys{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+}
+
+.m1{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.progress-container{
+    display: flex;
+    flex-direction: column-reverse;
+    font-weight: 900;
+    align-self: center;
+    
+}
+
+.progressbar{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+progress{
+    width: 300px;
+    height: 20px;
+    
+    border-radius: 15px;
+}
+
+progress::-webkit-progress-bar{
+    background-color: #030202;
+    
+    border-radius: 15px;
+}
+
+progress::-moz-progress-bar{
+    background-color: #fcf2a3;
+    border-radius: 15px;
+}
+
+progress::-webkit-progress-value{
+    background-color: rgb(255, 204, 0);
+    border-radius: 15px;
+}
+
+.progressbox {
+    height: 600px;
+    width: 400px;
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.progresstitle {
+    background-color: #2a2a2a;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 15px;
+    height: 70px;
+    align-content: center;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.progresselmnt1 {
+    background-color: #1a1a1a;
+    margin-top: 10px;
+    border: 2px solid;
+    height: 450px;
+    margin-left: 25px;
+    margin-right: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: scroll; /* Allows vertical scroll */
+    border-color: #2a2a2a;
+    border-radius: 15px;
+}
+
+.progress-container1 {
+    margin-left: 10px;
+    margin-top: 15px;
+    font: 1.1rem sans-serif;
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+progress {
+    width: 300px;
+    height: 20px;
+    border-radius: 15px;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #030202;
+    border-radius: 15px;
+}
+
+progress::-moz-progress-bar {
+    background-color: #fcf2a3;
+    border-radius: 15px;
+}
+
+progress::-webkit-progress-value {
+    
+    border-radius: 15px;
+}
+
+/* Scrollbar Customization for Different Progress Bars */
+.progresselmnt1::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Progress bar 1 scrollbar colors */
+.progress-container1:nth-child(1) .progresselmnt1::-webkit-scrollbar-thumb {
+    background-color: #ffcc00; /* Yellow */
+}
+.progress-container1:nth-child(1) .progresselmnt1::-webkit-scrollbar-thumb:hover {
+    background-color: #ff9900; /* Darker Yellow on Hover */
+}
+
+/* Progress bar 2 scrollbar colors */
+.progress-container1:nth-child(2) .progresselmnt1::-webkit-scrollbar-thumb {
+    background-color: #ff4500; /* OrangeRed */
+}
+.progress-container1:nth-child(2) .progresselmnt1::-webkit-scrollbar-thumb:hover {
+    background-color: #ff6347; /* Tomato Red on Hover */
+}
+
+/* Progress bar 3 scrollbar colors */
+.progress-container1:nth-child(3) .progresselmnt1::-webkit-scrollbar-thumb {
+    background-color: #32cd32; /* Lime Green */
+}
+.progress-container1:nth-child(3) .progresselmnt1::-webkit-scrollbar-thumb:hover {
+    background-color: #228b22; /* Forest Green on Hover */
+}
+
+/* Progress bar 4 scrollbar colors */
+.progress-container1:nth-child(4) .progresselmnt1::-webkit-scrollbar-thumb {
+    background-color: #1e90ff; /* Dodger Blue */
+}
+.progress-container1:nth-child(4) .progresselmnt1::-webkit-scrollbar-thumb:hover {
+    background-color: #4682b4; /* Steel Blue on Hover */
+}
+
+/* Progress bar 5 scrollbar colors */
+.progress-container1:nth-child(5) .progresselmnt1::-webkit-scrollbar-thumb {
+    background-color: #ff69b4; /* Hot Pink */
+}
+.progress-container1:nth-child(5) .progresselmnt1::-webkit-scrollbar-thumb:hover {
+    background-color: #ff1493; /* Deep Pink on Hover */
+}
+
+/* Progress bar 6 scrollbar colors */
+.progress-container1:nth-child(6) .progresselmnt1::-webkit-scrollbar-thumb {
+    background-color: #8a2be2; /* BlueViolet */
+}
+.progress-container1:nth-child(6) .progresselmnt1::-webkit-scrollbar-thumb:hover {
+    background-color: #9400d3; /* Dark Violet on Hover */
+}
+
+/* Progress bar 7 scrollbar colors */
+.progress-container1:nth-child(7) .progresselmnt1::-webkit-scrollbar-thumb {
+    background-color: #00ced1; /* Dark Turquoise */
+}
+.progress-container1:nth-child(7) .progresselmnt1::-webkit-scrollbar-thumb:hover {
+    background-color: #20b2aa; /* Light Sea Green on Hover */
+}
+
+#progress-bar1::-webkit-progress-value{
+    background-color: #cd3232;
+}
+
+#progress-bar2::-webkit-progress-value{
+    background-color: #ffcc00;
+}
+
+#progress-bar3::-webkit-progress-value{
+    background-color: #8a2be2;
+}
+
+#progress-bar4::-webkit-progress-value{
+    background-color: #1e90ff;
+}
+
+#progress-bar5::-webkit-progress-value{
+    background-color: #ff69b4;
+}
+
+#progress-bar6::-webkit-progress-value{
+    background-color: #02cccf;
+}
+
+#progress-bar7::-webkit-progress-value:hover{
+    background-color: #de1c1c;
+}
+
+#progress-bar1::-webkit-progress-value:hover{
+    background-color: #7e1d1d;
+}
+
+#progress-bar2::-webkit-progress-value:hover{
+    background-color: #b08d02;
+}
+
+#progress-bar3::-webkit-progress-value:hover{
+    background-color: #581a92;
+}
+
+#progress-bar4::-webkit-progress-value:hover{
+    background-color: #145ea9;
+}
+
+#progress-bar5::-webkit-progress-value:hover{
+    background-color: #ae4a7c;
+}
+
+#progress-bar6::-webkit-progress-value:hover{
+    background-color: #017a7c;
+}
+
+#progress-bar7::-webkit-progress-value:hover{
+    background-color: #851212;
+}
+
+.card{
+    width: 700px;
+    height: 600px;
+}
+
+.cardprogress{
+    width: 250px;
+    height: 600px;
+}
