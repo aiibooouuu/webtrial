@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #141622; /* Background color */
+}
+
+canvas {
+  display: block; /* Ensures canvas takes full screen */
+}

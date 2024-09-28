@@ -1,0 +1,35 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif; /* Set a default font */
+  background-color: #141622; /* Background color for the entire page */
+  color: #ffffff; /* Default text color */
+  overflow: hidden; /* Prevents scrolling */
+}
+
+/* Style for the root element */
+#root {
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+}
+
+/* Canvas styles */
+canvas {
+  display: block; /* Ensures the canvas takes the full available space */
+}
+
+/* Additional styling for any text or components can go here */
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px; /* Margin for headings */
+}
+
+p {
+  margin: 10px; /* Margin for paragraphs */
+}
+
+/* Add more custom styles as needed */
