@@ -1,31 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webpage Layout</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename= 'instdashboard.css')}}">
-</head>
-<body>
-    <header class="header">
-        <a href="#home" class="logo">TICK MY
-            <span>WAY</span>
-        </a>
-    
-        <i class='bx bx-menu' id="menu-icon"></i>
-    <nav class="navbar">
-        <a href="#home" class="active">HOME</a>
-        <a href="#education" >EDUCATION</a>
-        <a href="#services" >SERVICES</a>
-        <a href="#testimonials">TESTIMONIALS</a>
-        <a href="#contact" >CONTACT</a>
-    </nav>
-    </header>
+{% extends "base.html" %}
+{% block css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='avlblcourses.css')}}">
+{% endblock css %}
+{% block content %}
     <br><br><br><br><br><br><br><br><br><br><br><br>
     <br><br>
     <div class="text-image-wrapper">
         <div class="text-section">
-            <h2>Hello Instructor</h2>
+            <h2>Hello {{ username}}!</h2>
             
         </div>
         <div class="image-section">
@@ -35,7 +17,7 @@
 
     <div class="image-grid-wrapper">
         <!-- Text Section -->
-        <h2> My Courses</h2>
+        <h2> Available Courses:</h2>
 
         <!-- Image Grid Section -->
         <div class="image-grid">
@@ -50,5 +32,4 @@
         </div>
     </div>
     </section>
-</body>
-</html>
+{% endblock content %}

@@ -1,6 +1,20 @@
 {% extends "base.html" %}
 {% block css %}
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .btn-grp {
+            display: flex;
+            align-items: center; /* Optional: vertically centers buttons */
+        }
+
+        .btn {
+            margin-right: 20px; /* Space between buttons */
+        }
+
+        .btn:last-child {
+            margin-right: 0; /* Removes margin from the last button */
+        }
+    </style>
 {% endblock css %}
 {% block content %}
     <section class="home"id="home">
@@ -24,8 +38,8 @@
             </div> -->
             <br>
             <div class="btn-grp">
-                <a href="/login-student" class="btn"> Login as a STUDENT </a> &nbsp &nbsp
-                <a href="/login-instructor" class="btn"> Login as a INSTRUCTOR </a>
+                <a href="/register" class="btn"> REGISTER as a STUDENT </a> &nbsp &nbsp
+                <a href="/registerinst" class="btn"> REGISTER as a INSTRUCTOR </a> &nbsp &nbsp
             </div>
             </div>
             <div class="home-img">
