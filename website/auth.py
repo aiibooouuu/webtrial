@@ -50,7 +50,11 @@ def register_student():
 
     return render_template('student-registration.html', count=128, form=form)
 
-@auth.route('/login-instructor')
+@auth.route('/login-instructor', methods=['POST', 'GET'])
 def login_instructor():
-    return render_template('l2.html')
+    form = LoginForm()
+    if form.validate_on_submit():
+        return redirect(url_for('views.inst_dashboard'))
+
+    return render_template('instructor-login.html', count=128, form=form)
 
