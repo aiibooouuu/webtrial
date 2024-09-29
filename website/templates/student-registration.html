@@ -2,7 +2,7 @@
 {% block login_content %}
   <div class="signin">
     <div class="content">
-      <h2>Sign In as Student</h2>
+      <h2>Register as a student</h2>
       <div class="form">
         <div class="inputBox">
           {% if form.email.errors %}
@@ -33,22 +33,33 @@
           {% endif %}
         </div>
         <div class="inputBox">
-            {% if form.password.errors %}
-            {{ form.password(class='form-control is-invalid')}}
-            <i>Password  🔒</i>
+            {% if form.confirm_password.errors %}
+            {{ form.confirm_password(class='form-control is-invalid')}}
+            <i>Confirm Password  🔒</i>
             <div class='error-message'>
-              {% for error in form.password.errors %}
+              {% for error in form.confirm_password.errors %}
                 <span>{{ error }}</span>
               {% endfor %}
             </div>
           {% else %}
-            {{ form.password(class='form-control')}}
-            <i>Password  🔒</i>
+            {{ form.confirm_password(class='form-control')}}
+            <i>Confirm Password  🔒</i>
           {% endif %}
         </div>
+        <!---->
+        <div class="flash-messages">
+          {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              <ul>
+                {% for category, message in messages %}
+                  <li class="alert alert-{{ category }}">{{ message }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          {% endwith %}
+        </div>
         <div class="links">
-          <a href="#">Forgot Password</a>
-          <a href="{{ url_for('auth.register_student')}}">Register</a>
+          <a href="{{ url_for('auth.login_student')}}">Login Instead</a>
         </div>
         <div class="inputBox">
           {{ form.submit(class='btn')}}

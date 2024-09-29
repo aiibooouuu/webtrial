@@ -13,11 +13,13 @@
       <span class='box'></span>
     {% endfor %}
 </section>
+
+<!-- Your login form section -->
 <section>
-<form method='POST' action='' class='center-content'>
-  {{ form.hidden_tag() }}
-  {% block login_content %}{% endblock login_content%}
-</form>
+  <form method='POST' action='' class='center-content'>
+    {{ form.hidden_tag() }}
+    {% block login_content %}{% endblock login_content %}
+  </form>
 </section>
 <!-- partial -->
   
