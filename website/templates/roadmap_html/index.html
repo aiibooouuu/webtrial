@@ -8,11 +8,11 @@
 
 <!-- Open Graph / Facebook -->
     <link href="https://fonts.googleapis.com/css?family=lucida:400,500,700&display=swap" rel="stylesheet">
-    <link href='styles.css' rel='stylesheet' type='text/css'>
-    <link href='flowy.min.css' rel='stylesheet' type='text/css'>
+    <link href='{{url_for("static", filename="roadmap_static/styles.css")}}' rel='stylesheet' type='text/css'>
+    <link href='{{url_for("static", filename="roadmap_static/flowy.min.css")}}' rel='stylesheet' type='text/css'> <!-- flowy.min.css -->
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <script src="flowy.min.js"></script>
-    <script src="main.js"></script>   
+    <script src="{{url_for("static", filename="roadmap_static/flowy.min.js")}}"></script> <!-- flowy.min.js -->
+    <script src="{{url_for("static", filename="roadmap_static/main.js")}}"></script>   <!-- main.js -->
 </head>
 <body>
     <div id="navigation">

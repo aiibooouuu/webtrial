@@ -3,7 +3,6 @@
     <link rel="stylesheet" href="{{url_for('static', filename='stddashboard.css')}}">
 {% endblock css %}
 {% block content %}
-    </header>
     <br><br><br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br>
 
@@ -15,9 +14,14 @@
             <h2>Hello {{ user_email }}</h2>
         </div>
         <div class="image-section">
-            <img src="pfp.jpg" alt="Profile Image">
+            <img src="{{ url_for('static', filename='pfp.jpg')}}" alt="Profile Image">
         </div>
+        <form action="{{ url_for('auth.logout') }}" method="post" style="display:inline;">
+            <a href="{{ url_for('auth.logout') }}" class="btn-logout">Logout</a>
+        </form>
     </div>
+    <!-- Logout Button -->
+    
 
     <!-- Section for Available Courses, Mentor, Roadmap -->
     <section class="second-section">
@@ -36,8 +40,10 @@
         </div>
 
         <div class="small">
-            <h3>Roadmap</h3>
-            <p class="info">Click here to find roadmaps of people who achieved the same dream as yours</p>
+            <a href="{{url_for('views.student_roadmap')}}" style="text-decoration: none; color: inherit;">
+                <h3>Roadmap</h3>
+                <p class="info">Click here to find roadmaps of people who achieved the same dream as yours</p>
+            </a>
         </div>
     </section>
 

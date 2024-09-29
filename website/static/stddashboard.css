@@ -722,3 +722,34 @@ progress::-webkit-progress-value {
     border-radius: 10px;
     padding: 10px;
 }
+.text-image-wrapper {
+    display: flex;
+    align-items: center;  /* Vertically align items */
+    gap: 20px;            /* Adds space between the image and the logout button */
+  }
+  
+  .profile-image {
+    width: 50px;          /* Adjust the size of the profile image */
+    height: 50px;
+    border-radius: 50%;   /* Makes the image circular */
+  }
+  
+  .btn-logout {
+    background-color: #009980;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-logout:hover {
+    background-color: #ff1a1a;
+  }
+  
+  .btn-logout:active {
+    background-color: #00d7e6;
+  }
+  

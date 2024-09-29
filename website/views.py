@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, session
 from website.forms import RegistrationForm, LoginForm
+from website.models import User
 
 views = Blueprint('views', __name__)
 
@@ -9,9 +10,14 @@ def home():
 
 @views.route('/student-dashboard')
 def std_dashboard():
-    form = LoginForm()
-    user_email = session.get('user_email', 'Student')
-    return render_template('student-dashboard.html', title="Welcome Student", form=form, user_email=user_email)
+    user_id = session.get('user_id')  # Fetch user ID from session
+    user = User.query.get(user_id)     # Get user from the database
+    
+    if user:
+        user_email = user.email
+    else:
+        user_email = "User not found"
+    return render_template('student-dashboard.html', title="Welcome Student", user_email=user_email)
 
 @views.route('/instructor-dashboard')
 def inst_dashboard():
@@ -24,3 +30,7 @@ def student_courses():
 @views.route('/student-mentors')
 def student_mentors():
     return render_template('student-mentors.html', title="Student Mentors")
+
+@views.route('/student-roadmap')
+def student_roadmap():
+    return render_template('roadmap_html/index.html', title='Roadmap')

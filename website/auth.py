@@ -15,12 +15,19 @@ def login_student():
         user = User.query.filter_by(email=email).first()
 
         if user and user.password == password:
-            session['user_email'] = user.email
+            session['user_id'] = user.id
             flash('Login Successful', 'success')
             return redirect(url_for('views.std_dashboard'))
         else:
             flash('Login failed. Please check email or password', 'danger')
     return render_template("student-login.html", count=128, form=form)
+
+@auth.route('/logout', methods=['POST', 'GET'])
+def logout():
+    session.clear()  
+    flash('You have been logged out successfully.', 'success')  # Optional flash message
+    return redirect(url_for('auth.login_student'))  # Redirect to the login page
+
 
 @auth.route('/register-student', methods=['POST', 'GET'])
 def register_student():
@@ -38,7 +45,7 @@ def register_student():
             flash('Account Created Successfully', 'success')
         except Exception as e:
             db.session.rollback()  # Rollback the session on error
-            print(f"Error occurred: {e}")  # Log the error to console
+            print(f"Error occurred: {e}") 
             flash('An error occurred. Please try again.', 'danger')
 
     return render_template('student-registration.html', count=128, form=form)
@@ -47,10 +54,3 @@ def register_student():
 def login_instructor():
     return render_template('l2.html')
 
-@auth.route('/logout')
-def logout():
-    return "<p>Logged out</p>"
-
-@auth.route("/sign-up")
-def sign_up():
-    return "<p>Sign up</p>"
