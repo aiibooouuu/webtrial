@@ -171,7 +171,7 @@ body {
 
 
 .time {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
 }
 
 .icons {
@@ -180,7 +180,7 @@ body {
 }
 
 .app-icon, .streak-icon {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
 }
 
 .head {
@@ -326,7 +326,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 0px;
+    gap: 90px;
 }
 
 .money-p {
@@ -341,7 +341,7 @@ body {
 .m {
     display: flex;
     flex-direction: row;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .moneys {
@@ -357,6 +357,23 @@ body {
     margin-right: 0px;
 }
 
+.m2 {
+    height: 50px;
+    width: 50px;
+}
+
+#imgm2{
+    height: 60px;
+    width: 60px;
+}
+
+#imgm3{
+    height: 65%;
+    width: 85%;
+    align-self: center;
+    
+}
+
 .excess {
     display: flex;
     flex-direction: row;
@@ -370,12 +387,14 @@ body {
     flex-direction: column-reverse;
     font-weight: 900;
     align-self: center;
+    height: 90%;
+    width: 90%;
 }
 
-.progressbar {
+/* .progressbar {
     display: flex;
     flex-direction: column-reverse;
-}
+} */
 
 progress {
     width: 150px;
