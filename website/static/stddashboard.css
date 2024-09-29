@@ -84,7 +84,7 @@ body {
     align-items: center;
     padding: 20px;
     background-color: transparent;
-    max-width: 75%;
+    max-width: 80%;
     margin: 50px auto;
     border-radius: 10px;
     backdrop-filter: blur(10px);
@@ -108,7 +108,7 @@ body {
     display: flex;
     flex-direction: row;
     padding: 50px;
-    max-width: 75%;
+    max-width: 80%;
     margin: 50px auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -151,7 +151,7 @@ body {
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
-    height: 650px; /* Adjust as needed */
+    height: 750px; /* Adjust as needed */
 }
 
 .excess1 {
@@ -191,6 +191,7 @@ body {
     background-color: #131313;
     border-radius: 15px;
     padding: 20px;
+    height: 100px;
 }
 
 .days {
@@ -199,7 +200,7 @@ body {
     margin-bottom: 20px;
     background-color: #131313;
     border-radius: 15px;
-    height: 50px;
+    height: 80px;
     align-items: center;
     font-size: 2rem;
 }
@@ -234,6 +235,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    height: 90px;
 }
 
 .stat-icon {
@@ -358,8 +360,9 @@ body {
 .excess {
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    gap: 15px;
     width: 100%;
+    height: 300px;
 }
 
 .progress-container {
@@ -398,7 +401,7 @@ progress::-webkit-progress-value {
 }
 
 .progressbox {
-    height: 600px;
+    height: 710px;
     width: 100%;
     background-color: #1a1a1a;
     border-radius: 15px;
@@ -422,7 +425,7 @@ progress::-webkit-progress-value {
     background-color: #1a1a1a;
     margin-top: 10px;
     border: 2px solid;
-    height: 450px;
+    height: 680px;
     margin-left: 25px;
     margin-right: 25px;
     display: flex;
@@ -613,7 +616,7 @@ progress::-webkit-progress-value {
 
 
 .instructor-contact{
-    max-width: 75%;
+    max-width: 80%;
     margin: 50px auto;
     height: 200px;
     background-color: gray;
@@ -623,7 +626,7 @@ progress::-webkit-progress-value {
 
 .comment-post {
     background-color: black;
-    max-width: 75%;
+    max-width: 80%;
     border-radius: 15px;
     padding: 20px;
     color: #fff;
@@ -677,7 +680,7 @@ progress::-webkit-progress-value {
 }
 
 .profile-pic-small {
-    width: 6%;
+    width: 4%;
     height: 40px ;
     background-color: #fff;
     border-radius: 50%;
@@ -687,30 +690,31 @@ progress::-webkit-progress-value {
 .comment-box input {
     border: none;
     background-color: transparent;
-    color: #fff;
+    color: #000000;
     width: 100%;
     outline: none;
     font-size: 14px;
 }
 
 .comment-box input::placeholder {
-    color: #c0c0c0;
+    color: #696868;
 }
 
 .send-button {
     background-color: transparent;
     border: none;
     color: #fff;
-    font-size: 18px;
+    font-size: 3rem;
     cursor: pointer;
-    width: 9%;
-    align-items: center;
-    padding: 10px;
-    padding-left: 15px;
+    width: 2%;
+    align-items:flex-end;
+    padding-left: 30px;
+    padding-right: 10px;
+    vertical-align: middle;
 }
 
 .addcmnt{
-    width: 85%;
+    width: 1850px;
     background-color: #fff;
     height: 40px;
     text-align: center;
