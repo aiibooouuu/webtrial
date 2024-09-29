@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, session
 from website.forms import RegistrationForm, LoginForm
 
 views = Blueprint('views', __name__)
@@ -10,7 +10,8 @@ def home():
 @views.route('/student-dashboard')
 def std_dashboard():
     form = LoginForm()
-    return render_template('student-dashboard.html', title="Welcome Student", form=form)
+    user_email = session.get('user_email', 'Student')
+    return render_template('student-dashboard.html', title="Welcome Student", form=form, user_email=user_email)
 
 @views.route('/instructor-dashboard')
 def inst_dashboard():

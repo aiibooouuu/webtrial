@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, flash, redirect, url_for
+from flask import Blueprint, render_template, flash, redirect, url_for, session
 from website.forms import RegistrationForm , LoginForm # Assuming RegistrationForm is the class in forms.py
 from website import db
 from website.models import User
@@ -15,6 +15,7 @@ def login_student():
         user = User.query.filter_by(email=email).first()
 
         if user and user.password == password:
+            session['user_email'] = user.email
             flash('Login Successful', 'success')
             return redirect(url_for('views.std_dashboard'))
         else:
