@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block css %}
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{url_for('static', filename='webicon.png')}}">
 {% endblock css %}
 {% block content %}
     <section class="home"id="home">
@@ -9,11 +10,10 @@
             <h4 class="text-animation">I'm a <span></span></h4>
 
             <br> <br> <br>
-            <p> Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Cumque nobis perferendis, 
-                tempora est iste maxime? Consectetur iste alias ad?
-                Nemo maxime qui ullam quasi iusto ipsum accusamus 
-                autem culpa nostrum.
+            <p> Our Learning Path Dashboard is designed to help you explore new topics,
+                 deepen your understanding of existing skills, and achieve your educational goals.
+                 Whether you're a student, professional, or simply curious learner, 
+                 we offer a curated collection of learning paths and resources tailored to your interests.
             </p>
             <br>
             <!-- <div class="social-icons">
@@ -29,27 +29,89 @@
             </div>
             </div>
             <div class="home-img">
-                <img src="{{ url_for('static', filename='img.webp') }}" alt="image">
+                <img src="{{ url_for('static', filename='gif.gif') }}" alt="image">
             
         </div>
     </section>
 
     <section class="education" id="education">
-        <h2 class="heading">Education</h2>
+        <h2 class="heading">Pathway to Possibilities</h2>
         <div class="timeline-items">
 
             <div class="timeline-item">
 
                 <div class="timeline-dot"></div>
 
-                    <div class="timeline-date"> 2021</div> <br>
+                    <div class="timeline-date"></div> <br>
                     <div class="timeline-content">
-                    <h3>High School</h3>
-                    <p> Lorem ipsum dolor sit amet consectetur 
-                    adipisicing elit. Ratione nemo velit soluta 
-                    voluptatibus quasi dicta consequuntur. Id sequi
-                    sint eius quas, ullam rerum quo porro blanditiis 
-                    explicabo nobis error animi.</p>
+                    <h3>Psychology</h3><br>
+                    <p>
+                        <b> Year 1:</b><br>
+
+                        Foundation Courses:<br>
+                        Introduction to Psychology
+                        Statistics,
+                        Research Methods,
+                        Biological Psychology,
+                        Social Psychology.<br><br>
+                        <b>Year 2:</b><br>
+
+                        Core Psychology Courses:
+
+                        Cognitive Psychology,
+                        Developmental Psychology,
+                        Personality Psychology,
+                        Abnormal Psychology,
+                        Counseling Psychology,
+                        Elective Courses:<br>
+
+                        Choose electives based on your interests, such as Clinical Psychology, Industrial-Organizational Psychology, or Forensic Psychology.<br><br>
+                        <b>Year 3:</b><br>
+
+                        Advanced Psychology Courses:<br>
+
+                        Psychopathology,
+                        Psychotherapy,
+                        Health Psychology,
+                        Neuropsychology,
+                        Research Design and Analysis,
+                        Internship: Gain practical experience through an internship in a psychology-related field.<br><br>
+
+                        <b>Year 4:</b><br>
+
+                        Thesis or Capstone Project: Complete a final project that demonstrates your research skills and knowledge.<br>
+                        Licensure Preparation: If you plan to become a licensed psychologist, start preparing for the required exams.<br><br>
+                        </p>
+                        </div>
+
+                    </div>
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                        <div class="timeline-date"></div><br>
+                        <div class="timeline-content">
+                        <h3>Chartered Accountant</h3><br>
+                        <p>
+                            <b>Foundation Course:</b><br>
+
+                        Eligibility: Complete Class 12 or equivalent with a minimum of 55% marks.<br>
+                        Subjects: Accounting, Law, Economics, and Business Mathematics.<br>
+                        Exam: Clear the Foundation exam conducted by the Institute of Chartered Accountants of India (ICAI).<br><br>
+                        <b>Intermediate Course:</b><br>
+
+                        Eligibility: Clear the Foundation exam.<br>
+                        Groups: The course is divided into two groups: Group 1 and Group 2.<br>
+                        Subjects: Accounting, Auditing, Law, Taxation, Cost Accounting, and Financial Management.<br>
+                        Exams: Clear both Group 1 and Group 2 exams.<br><br>
+                        <b>Final Course:</b><br>
+
+                        Eligibility: Clear both groups of the Intermediate course.<br>
+                        Modules: The course is divided into four modules: Auditing, Taxation, Corporate and Allied Laws, and Financial Reporting.<br>
+                        Articleship: Complete a three-year articleship training under a qualified CA.<br><br>
+                        <b>Exams:</b> Clear all four modules of the Final exam.
+                    </p>
                     </div>
 
             </div>
@@ -58,14 +120,46 @@
 
                 <div class="timeline-dot"></div>
 
-                    <div class="timeline-date"> 2022</div><br>
+                    <div class="timeline-date"></div><br>
                     <div class="timeline-content">
-                    <h3>University </h3>
-                    <p>Lorem ipsum dolor sit amet consectetur 
-                    adipisicing elit. Ratione nemo velit soluta 
-                    voluptatibus quasi dicta consequuntur. Id sequi
-                    sint eius quas, ullam rerum quo porro blanditiis 
-                    explicabo nobis error animi.</p>
+                    <h3>BBA-Bachelors of Business Administration</h3>
+                    <p>
+                        <b>Year 1:</b><br>
+
+                        Foundation Courses:<br>
+                        Business Mathematics,
+                        Microeconomics,
+                        Financial Accounting,
+                        Business Communication,
+                        Principles of Management<br><br>
+                        <b>  Year 2:</b><br>
+                        
+                        Core Business Courses:<br>
+                        Marketing Management,
+                        Human Resource Management,
+                        Organizational Behavior,
+                        Business Law,
+                        Operations Management,
+                        Financial Management,
+                        Elective Courses:<br>
+                        
+                        Choose electives based on your interests, such as Entrepreneurship, International Business, or Digital Marketing.<br><br>
+                        <b>Year 3:</b><br>
+                        
+                        Advanced Business Courses:<br>
+                        
+                        Strategic Management,
+                        Business Analytics,
+                        E-commerce,
+                        Corporate Social Responsibility,
+                        International Business Management,
+                        Internship: Gain practical experience through an internship in a relevant field.<br><br>
+                        
+                        <b>  Final Year:</b><br>
+                        
+                        <b>Capstone Project:</b> Complete a final project that integrates knowledge from various courses.<br>
+                        <b> Job Search:</b> Begin your job search and prepare for interviews.<br>
+                    </p>
                     </div>
 
             </div>
@@ -74,30 +168,47 @@
 
                 <div class="timeline-dot"></div>
 
-                    <div class="timeline-date"> 2023</div><br>
+                    <div class="timeline-date"></div><br> 
                     <div class="timeline-content">
-                    <h3> Internship</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur 
-                    adipisicing elit. Ratione nemo velit soluta 
-                    voluptatibus quasi dicta consequuntur. Id sequi
-                    sint eius quas, ullam rerum quo porro blanditiis 
-                    explicabo nobis error animi.</p>
-                    </div>
+                    <h3>MBBS</h3>
+                    <p><b>MBBS Course (5.5 years):</b><br><br>
 
-            </div>
-
-            <div class="timeline-item">
-
-                <div class="timeline-dot"></div>
-
-                    <div class="timeline-date"> 2024</div><br> 
-                    <div class="timeline-content">
-                    <h3>Job</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur 
-                    adipisicing elit. Ratione nemo velit soluta 
-                    voluptatibus quasi dicta consequuntur. Id sequi
-                    sint eius quas, ullam rerum quo porro blanditiis 
-                    explicabo nobis error animi.</p>
+                        <b> Year 1:</b><br>
+                        
+                        Anatomy,
+                        Physiology,
+                        Biochemistry,
+                        General Medicine,
+                        Pharmacology<br><br>
+                        <b>Year 2:</b><br>
+                        
+                        
+                        Pathology,
+                        Microbiology,
+                        Forensic Medicine,
+                        Pharmacology (continued),
+                        Community Medicine<br><br>
+                        <b> Year 3:</b><br>
+                        
+                        Medicine,
+                        Surgery,
+                        Pediatrics,
+                        Obstetrics and Gynecology,
+                        Ophthalmology<br><br>
+                        <b>Year 4:</b><br>
+                        
+                        Medicine (continued),
+                        Surgery (continued),
+                        Pediatrics (continued),
+                        Obstetrics and Gynecology (continued),
+                        Ophthalmology (continued),<br><br>
+                        <b>Year 5:</b><br>
+                        
+                        Internship (Practical training in hospitals)<br>
+                        <b> Post-MBBS:</b><br>
+                        
+                        MD/MS: Consider pursuing a postgraduate degree (MD or MS) in a specialized medical field.<br>
+                    </p>
                     </div>
 
             </div>
@@ -112,50 +223,90 @@
 
             <div class="service-box">
                 <div class="service-info">
-                    <h4> UI Design</h4>
-                    <p> Lorem ipsum dolor sit, amet consectetur
-                        adipisicing elit. Eos, accusantium iure. 
-                        Veritatis magni saepe adipisci quas qui 
-                        incidunt officia dolore, dignissimos, 
-                        quae odit quaerat facilis obcaecati animi
-                        ut laboriosam sint.      
+                    <h4>Carmel Classes: Your Gateway to Engineering Success</h4><br>
+                    <p><b>10th</b><br>
+                        Foundation Building:
+                        We Strengthen core subjects like Mathematics, Physics, and Chemistry.
+                        Develop problem-solving skills and logical reasoning.
+                        Explore different branches of engineering to identify interests.<br><br>
+                        <b> 11th</b><br>
+                        Focus on exam Preparation:
+                        Begin preparing for engineering entrance exams (JEE, BITSAT, etc.).
+                        Focus on understanding concepts and practicing problem-solving techniques.
+                        Attend regular coaching classes and workshops.<br><br>
+                        <b>12th</b><br>
+                        Intensive Preparation:
+                        Increase the frequency and intensity of practice sessions.
+                        Take mock tests to assess your preparation level.
+                        Seek guidance from experienced mentors for doubt clarification.
+                        We offer preparation and counciling session to focus on 12th boards<br><br>
+                    </p>    
                 </div>
             </div>
             
                 
             <div class="service-box">
                 <div class="service-info">
-                    <h4> Front End Dveloper</h4>
-                    <p> Lorem ipsum dolor sit, amet consectetur
-                        adipisicing elit. Eos, accusantium iure. 
-                        Veritatis magni saepe adipisci quas qui 
-                        incidunt officia dolore, dignissimos, 
-                        quae odit quaerat facilis obcaecati animi
-                        ut laboriosam sint.      
+                    <h4>NATA Smashers</h4><br>
+                    <p> <b> 11th:</b><br>
+
+                        Start Building a strong foundation in core subjects.
+                        Develop observational skills and spatial reasoning.
+                        Explore architecture and understand NATA requirements.<br><br>
+                        <b> 12th:</b><br>
+                        
+                        Focus on NATA-specific topics.
+                        Practice drawing and problem-solving.
+                        Take mock tests and solve previous year papers.<br><br>
+                        <b> Portfolio Development:</b><br>
+                        
+                        Create a diverse portfolio showcasing creativity and design skills.
+                        Include sketches, drawings, and models.<br><br>
+                        </p>     
                 </div>
             </div>
         
             <div class="service-box">
                 <div class="service-info">
-                    <h4> BackEnd Dev</h4>
-                    <p> Lorem ipsum dolor sit, amet consectetur
-                        adipisicing elit. Eos, accusantium iure. 
-                        Veritatis magni saepe adipisci quas qui 
-                        incidunt officia dolore, dignissimos, 
-                        quae odit quaerat facilis obcaecati animi
-                        ut laboriosam sint.      
+                    <h4>MedAspire:A Roadmap to Medical Success</h4><br>
+                    <p><b>11th:</b><br>
+
+                        Build a strong foundation in core subjects.
+                        Develop problem-solving skills.
+                        Understand the NEET exam pattern.<br><br>
+                        <b>12th:</b><br>
+                        
+                        Focus on NEET-specific topics.
+                        Practice MCQs and solve previous year papers.
+                        Develop effective time management.<br>
+                        <b>Mock Tests and Practice:</b><br><br>
+                        
+                        Take regular mock tests to assess your preparation.
+                        Practice with a variety of question papers.<br><br>
+                        </p>     
                 </div>
             </div>
         
             <div class="service-box">
                 <div class="service-info">
-                    <h4> Testing</h4>
-                    <p> Lorem ipsum dolor sit, amet consectetur
-                        adipisicing elit. Eos, accusantium iure. 
-                        Veritatis magni saepe adipisci quas qui 
-                        incidunt officia dolore, dignissimos, 
-                        quae odit quaerat facilis obcaecati animi
-                        ut laboriosam sint.      
+                    <h4>Achievers:A Roadmap to MBA Success</h4><br>
+                    <p><b>Year 1:</b><br>
+
+                        Build a strong foundation in core subjects.
+                        Develop analytical and problem-solving skills.
+                        Understand the CAT exam pattern.<br><br>
+                        <b>Year 2:</b><br>
+                        
+                        Focus on CAT-specific topics.
+                        Practice MCQs and solve previous year papers.
+                        Develop effective time management.<br><br>
+                        <b>Year 3:</b><br>
+                        
+                        Intensify practice sessions.
+                        Take regular mock tests.
+                        Seek guidance from mentors.<br><br>
+
+                    </p>      
                 </div>
             </div>
         </div>
@@ -167,26 +318,21 @@
 
             <div class="wrapper">
                     <div class="testimonials-item">
-                        <img src="{{ url_for('static', filename='2.jpg')}}" alt="">
-                        <h2>Mentor1</h2>
+                        <img src="{{ url_for('static', filename='mentorpfp.jpg')}}" alt="">
+                        <h2>Dr. Rudra Singh </h2>
                         <div claass="rating">
                             <i class='bx bxs-star' id="star"></i>
-                            <i class='bx bxs-star' id="star"></i>
-                            <i class='bx bxs-star' id="star"></i>
-                            <i class='bx bxs-star' id="star"></i>
-                            <i class='bx bxs-star' id="star"></i>
+                            <i class='bx bxs-star' id="astar"></i>
+                            <i class='bx bxs-star' id="astar"></i>
+                            <i class='bx bxs-star' id="astar"></i>
+                            <i class='bx bxs-star' id="astar"></i>
                         </div>
-                        <p>Lorem ipsum dolor, sit amet consectetur
-                        adipisicing elit. Quia, odit eum, voluptatum
-                        officia earum ipsa ipsam enim totam ut 
-                        dolore magni nam adipisci natus, 
-                        consequuntur labore debitis repudiandae 
-                        commodi excepturi?</p>
+                        <p>Dr. Rudra Singh is a Chief Data Scientist with over 15 years of experience in leveraging data for business success. Passionate about mentoring, she empowers others to unlock the potential of analytics through hands-on workshops.</p>
                     </div>
 
                     <div class="testimonials-item">
-                        <img src="{{ url_for('static', filename='3.jpg')}}" alt="">
-                        <h2>Mentor2</h2>
+                        <img src="{{ url_for('static', filename='mentorpfp.jpg')}}" alt="">
+                        <h2>Prof. Danish Zehen </h2>
                         <div claass="rating">
                             <i class='bx bxs-star' id="star"></i>
                             <i class='bx bxs-star' id="star"></i>
@@ -203,14 +349,14 @@
                     </div>
 
                     <div class="testimonials-item">
-                        <img src="{{ url_for('static', filename='4.jpg')}}" alt="">
-                        <h2>Mentor3</h2>
+                        <img src="{{ url_for('static', filename='mentorpfp.jpg')}}" alt="">
+                        <h2>CA. Divya Subramanyum</h2>
                         <div claass="rating">
                             <i class='bx bxs-star' id="star"></i>
                             <i class='bx bxs-star' id="star"></i>
                             <i class='bx bxs-star' id="star"></i>
-                            <i class='bx bxs-star' id="star"></i>
-                            <i class='bx bxs-star' id="star"></i>
+                            <i class='bx bxs-star' id="astar"></i>
+                            <i class='bx bxs-star' id="astar"></i>
                         </div>
                         <p>Lorem ipsum dolor, sit amet consectetur
                         adipisicing elit. Quia, odit eum, voluptatum

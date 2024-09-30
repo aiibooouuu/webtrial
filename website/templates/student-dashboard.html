@@ -1,48 +1,338 @@
 {% extends "base.html" %}
 {% block css %}
     <link rel="stylesheet" href="{{url_for('static', filename='stddashboard.css')}}">
+    <link rel="icon" href="{{url_for('static', filename='webicon.png')}}">
 {% endblock css %}
 {% block content %}
-    </header>
     <br><br><br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br>
 
 
         
-        
-        <div class="text-image-wrapper">
-            <div class="text-section">
-                <h2>Hello Student</h2>
-                
-            </div>
-            <div class="image-section">
-                <img src="pfp.jpg" alt="Example Image">
-            </div>
+    <!-- hello student  div section -->
+    <div class="text-image-wrapper">
+        <div class="text-section">
+            <h2>Hello {{ user_username }}</h2>
+        </div>
+        <div class="image-section">
+            <img src="{{ url_for('static', filename='pfp.jpg')}}" alt="Profile Image">
+        </div>
+        <form action="{{ url_for('auth.logout') }}" method="post" style="display:inline;">
+            <a href="{{ url_for('auth.logout') }}" class="btn-logout">Logout</a>
+        </form>
+    </div>
+    <!-- Logout Button -->
+    
+
+    <!-- Section for Available Courses, Mentor, Roadmap -->
+    <section class="second-section">
+        <div class="small">
+            <a href="{{url_for('views.student_courses')}}" style="text-decoration: none; color: inherit;">
+                <h3>Available Courses</h3>
+                <p class="info">Click here to view your courses</p>
+            </a>
         </div>
 
-        
-        <div class="second-section">
-            <div class="small">
-                <a href="/student-courses" style="text-decoration: none; color: inherit;">
-                    <h3>Available Courses</h3>
-                    <p class="info">Click here to view your courses</p>
-                </a>
-            </div>
-            <div class="small">
-                <a href="/student-mentors" style="text-decoration: none; color: inherit;">
-                    <h3>Mentor</h3>
-                    <p class="info">Click here to contact with experts
-                        of your intrested field</p>
-                </a>
-            </div>
-            <div class="small">
+        <div class="small">
+            <a href="{{url_for('views.student_mentors')}}" style="text-decoration: none; color: inherit;">
+                <h3>Mentor</h3>
+                <p class="info">Click here to contact with experts of your interested field</p>
+            </a>
+        </div>
+
+        <div class="small">
+            <a href="{{url_for('views.student_roadmap')}}" style="text-decoration: none; color: inherit;">
                 <h3>Roadmap</h3>
-                <p class="info">Click here to find roadmaps of
-                    people who acheived the same 
-                    dream as yours</p>
+                <p class="info">Click here to find roadmaps of people who achieved the same dream as yours</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- progress card and progress bars Section -->
+    <sect class="extra-section">
+        <div class="excess1" >
+
+            <div class="head">
+            <div class="time">00:00</div>
+            <div class="icons">
+                <div class="app-icon">📚</div>
+                <div class="streak-icon">🔗 </div>
+            </div>
+            </div>
+
+            <div class="days">
+                <div class="day">F</div>
+                <div class="day">S</div>
+                <div class="day">S</div>
+                <div class="day active">M</div>
+                <div class="day active">T</div>
+                <div class="day active">W</div>
+                <div class="day active">T</div>
+            </div>
+
+            <section class="stats">
+                <div class="stat-card">
+                    <div class="stat-icon">⏱️</div>
+                    <div class="stat-info">
+                        <p class="stat-number">8 hours</p>
+                        <p class="stat-label">Total practiced</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-info">
+                        <p class="stat-number">13</p>
+                        <p class="stat-label">Total sessions</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">😊</div>
+                    <div class="stat-info">
+                        <p class="stat-number">3.3</p>
+                        <p class="stat-label">Average mood</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-info">
+                        <p class="stat-number">2.8</p>
+                        <p class="stat-label">Average focus</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="excess">
+            <section class="activity">
+                <h2>Activity</h2>
+                <div class="calendar">
+                    <div class="box">
+                        <div class="month">Nov 2023</div>
+                        <div class="month">Dec 2023</div>
+                        <div class="month">Jan 2024</div>
+                    </div>
+                    <div class="days-grid">
+                        <!-- Loop through days, active days are red -->
+                        
+                        <div class="day-square active"></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square"></div>
+                        <div class="day-square "></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square "></div>
+                        <div class="day-square "></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square "></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square "></div>
+    
+                        <div class="day-square active"></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square"></div>
+                        <div class="day-square "></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square "></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square active"></div>
+    
+                        
+                        <div class="day-square "></div>
+                        <div class="day-square "></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square "></div>
+                        <div class="day-square "></div>
+                        <div class="day-square "></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square active"></div>
+    
+                        
+                        <div class="day-square "></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square "></div>
+                        <div class="day-square "></div>
+                        <div class="day-square "></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square "></div>
+    
+                        
+                        <div class="day-square "></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square"></div>
+                        <div class="day-square "></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square "></div>
+                        <div class="day-square "></div>
+                        <div class="day-square "></div>
+                        <div class="day-square "></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square "></div>
+                        <div class="day-square "></div>
+    
+                        <div class="day-square "></div>
+                        <div class="day-square "></div>
+                        <div class="day-square"></div>
+                        <div class="day-square "></div>
+                        <div class="day-square "></div>
+                        <div class="day-square "></div>
+                        <div class="day-square "></div>
+                        <div class="day-square "></div>
+                        <div class="day-square "></div>
+                        <div class="day-square "></div>
+                        <div class="day-square active"></div>
+                        <div class="day-square "></div>
+                        <div class="day-square "></div>
+                        <div class="day-square "></div>
+                        
+                        
+                        <!-- Continue this pattern -->
+                    </div>
+                </div>
+            </section>
+
+            <section class="money">
+                <div class="moneys">
+                <div class="money-sec">
+                    <div class="m2"><img id="imgm2" src="{{url_for('static', filename='money.png')}}" alt="money" ></div>
+                    <div class="m"><p >Platinum Count</p> </div>
+                </div>
                 
+                    <div class="m1"><p > 🪙300</p> </div>
+                </div>
+                
+                <div class="progressbar">
+                <div class="progress-container">
+                    <img id="imgm3" src="{{url_for('static', filename='money-stack2.png')}}" alt="money-stack" >
+                </div>
+                </div>
+                </div>
+    
+                <div class="money-content">
+                    
+                </div>
+                
+            </section>
+        </div>
+
+
+        </div>
+
+        <div class="excess2">
+            <section class="progresscourse">
+
+                <div class="progressbox">
+                    <div class="progresstitle">
+                        COURSE PROGRESS 📊
+                    </div>
+        
+                    <div class="progresselmnt1">
+                        <div class="progress-container1">
+                            Mechanics <br>
+                            <progress id="progress-bar1" value="40" max="100" ></progress>
+                        </div>
+        
+                        <div class="progress-container1">
+                            Human Values and Ethics <br>
+                            <progress id="progress-bar2" value="70" max="100" ></progress>
+                        </div>
+        
+                        <div class="progress-container1">
+                            Mathematics <br>
+                            <progress id="progress-bar3" value="10" max="100" ></progress>
+                        </div>
+        
+                        <div class="progress-container1">
+                            Chemistry <br>
+                            <progress id="progress-bar4" value="20" max="100" ></progress>
+                        </div>
+        
+                        <div class="progress-container1">
+                            Physics <br>
+                            <progress id="progress-bar5" value="90" max="100" ></progress>
+                        </div>
+        
+                        <div class="progress-container1">
+                            Arts <br>
+                            <progress id="progress-bar6" value="55" max="100" ></progress>
+                        </div>
+        
+                        <div class="progress-container1">
+                            Electronics <br>
+                            <progress id="progress-bar7" value="40" max="100" ></progress>
+                        </div>
+                    </div>
+                </div>
+        
+            </section>
+        </div>
+    </div>
+</sect>
+    <!-- instructor commmunocating section -->
+    <!-- SECTION 1 -->
+    <section class="instructor-part">
+        <div class="comment-post">
+            <div class="top">
+                <div class="profile-pic"><img src="" alt="pfp" ></div>
+                <div class="instructor-details">
+                    <h3>Prof. Danish Zehen</h3>
+                    <p>MATHEMATICS SEM 3</p>
+                </div>
+            </div>
+            <div class="comment-content">
+                <p>
+                            Prof. Danish Zehen Posted New Material 'practice_sheet_1.pdf'
+                </p>
+            </div>
+            <div class="comment-box">
+                <div class="profile-pic-small"></div>
+                <div class="addcmnt"><input type="text" placeholder="ADD A COMMENT"></div>
+                <div class="btn"><button class="send-button">&#10148;</button></div>
             </div>
         </div>
-        
     </section>
+    <!--SECTION 2-->
+    <section class="instructor-part">
+        <div class="comment-post">
+            <div class="top">
+                <div class="profile-pic"><img src="" alt="pfp" ></div>
+                <div class="instructor-details">
+                    <h3>CA. Divya Subramanyum</h3>
+                    <p>ELECTRONICS</p>
+                </div>
+            </div>
+            <div class="comment-content">
+                <p>
+                    Reminder for Semester 2 quiz on '23-09-2024'
+                </p>
+            </div>
+            <div class="comment-box">
+                <div class="profile-pic-small"></div>
+                <div class="addcmnt"><input type="text" placeholder="ADD A COMMENT"></div>
+                <div class="btn"><button class="send-button">&#10148;</button></div>
+            </div>
+        </div>
+    </section>
+    
 {% endblock content %}

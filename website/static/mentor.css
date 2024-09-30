@@ -23,9 +23,10 @@ html{
 }
 
 body{
-    background: url('bg.jpg');
-    background-position: center;
-    background-size: cover;
+    background-image:     
+    repeating-linear-gradient(to right, transparent 0 50px, rgba(255, 255, 255, 0.15) 50px 51px),    
+    repeating-linear-gradient(to bottom, transparent 0 50px, rgba(255, 255, 255, 0.15) 50px 51px);
+    background-color: var(--bg-color);
     color: var(--text-color);
     
 }

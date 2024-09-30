@@ -1,31 +1,28 @@
 {% extends "base.html" %}
+<link rel="icon" href="{{url_for('static', filename='webicon.png')}}">
 {% block content %}
     <section class="testimonials" id="testimonials">
         <div class="testimonials-box">
             <h2 class="heading"></h2>
+            <br> <br><br><br><br><br><br>
 
             <div class="wrapper">
                     <div class="testimonials-item">
-                        <img src="pfp1.jpg" alt="">
-                        <h2>Mentor 1</h2>
+                        <img src="{{ url_for('static', filename='mentorpfp.jpg')}}" alt="">
+                        <h2>Dr. Rudra Singh </h2>
                         <div claass="rating">
                             <i class='bx bxs-star' id="star"></i>
-                            <i class='bx bxs-star' id="star"></i>
-                            <i class='bx bxs-star' id="star"></i>
-                            <i class='bx bxs-star' id="star"></i>
-                            <i class='bx bxs-star' id="star"></i>
+                            <i class='bx bxs-star' id="astar"></i>
+                            <i class='bx bxs-star' id="astar"></i>
+                            <i class='bx bxs-star' id="astar"></i>
+                            <i class='bx bxs-star' id="astar"></i>
                         </div>
-                        <p>Lorem ipsum dolor, sit amet consectetur
-                        adipisicing elit. Quia, odit eum, voluptatum
-                        officia earum ipsa ipsam enim totam ut 
-                        dolore magni nam adipisci natus, 
-                        consequuntur labore debitis repudiandae 
-                        commodi excepturi?</p>
+                        <p>Dr. Rudra Singh is a Chief Data Scientist with over 15 years of experience in leveraging data for business success. Passionate about mentoring, she empowers others to unlock the potential of analytics through hands-on workshops.</p>
                     </div>
 
                     <div class="testimonials-item">
-                        <img src="pfp1.jpg" alt="">
-                        <h2>Mentor 2</h2>
+                        <img src="{{ url_for('static', filename='mentorpfp.jpg')}}" alt="">
+                        <h2>Prof. Danish Zehen </h2>
                         <div claass="rating">
                             <i class='bx bxs-star' id="star"></i>
                             <i class='bx bxs-star' id="star"></i>
@@ -33,35 +30,25 @@
                             <i class='bx bxs-star' id="star"></i>
                             <i class='bx bxs-star' id="star"></i>   
                         </div>
-                        <p>Lorem ipsum dolor, sit amet consectetur
-                        adipisicing elit. Quia, odit eum, voluptatum
-                        officia earum ipsa ipsam enim totam ut 
-                        dolore magni nam adipisci natus, 
-                        consequuntur labore debitis repudiandae 
-                        commodi excepturi?</p>
+                        <p>Danish Zehen is a professor specializing in social media management, bringing a blend of academic insight and practical expertise to the classroom. With a strong background in digital marketing and content strategy, he helps students understand the dynamic world of social media platforms and their impact on businesses.</p>
                     </div>
 
                     <div class="testimonials-item">
-                        <img src="pfp1.jpg" alt="">
-                        <h2>Mentor 3</h2>
+                        <img src="{{ url_for('static', filename='mentorpfp.jpg')}}" alt="">
+                        <h2>CA. Divya Subramanyum</h2>
                         <div claass="rating">
                             <i class='bx bxs-star' id="star"></i>
                             <i class='bx bxs-star' id="star"></i>
                             <i class='bx bxs-star' id="star"></i>
-                            <i class='bx bxs-star' id="star"></i>
-                            <i class='bx bxs-star' id="star"></i>
+                            <i class='bx bxs-star' id="astar"></i>
+                            <i class='bx bxs-star' id="astar"></i>
                         </div>
-                        <p>Lorem ipsum dolor, sit amet consectetur
-                        adipisicing elit. Quia, odit eum, voluptatum
-                        officia earum ipsa ipsam enim totam ut 
-                        dolore magni nam adipisci natus, 
-                        consequuntur labore debitis repudiandae 
-                        commodi excepturi?</p>
+                        <p>Divya Subramanyum is a professor of accountancy with extensive knowledge in financial reporting and management accounting. She focuses on guiding students through the complexities of accounting principles and real-world financial practices.</p>
                     </div>
             </div>
         </div>
     </section>
 {% endblock content %}
 {% block css %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='mentor.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 {% endblock css %}

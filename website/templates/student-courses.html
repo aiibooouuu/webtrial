@@ -1,17 +1,18 @@
 {% extends "base.html" %}
 {% block css %}
     <link rel="stylesheet" href="{{ url_for('static', filename='avlblcourses.css')}}">
+    <link rel="icon" href="{{url_for('static', filename='webicon.png')}}">
 {% endblock css %}
 {% block content %}
     <br><br><br><br><br><br><br><br><br><br><br><br>
     <br><br>
     <div class="text-image-wrapper">
         <div class="text-section">
-            <h2>Hello Student!</h2>
+            <h2>List of Available Courses</h2>
             
         </div>
         <div class="image-section">
-            <img src="pfp.jpg" alt="Example Image">
+            <img src="{{ url_for('static', filename='pfp.jpg')}}" alt="Example Image">
         </div>
     </div>
 
@@ -21,14 +22,14 @@
 
         <!-- Image Grid Section -->
         <div class="image-grid">
-            <img class="imgcourse" src="s1.jpg" alt="Image 1">
-            <img class="imgcourse" src="s2.jpg" alt="Image 2">
-            <img class="imgcourse" src="s3.jpg" alt="Image 3">
-            <img class="imgcourse" src="s4.jpg" alt="Image 4">
-            <img class="imgcourse" src="s5.jpg" alt="Image 5">
-            <img class="imgcourse" src="s6.jpg" alt="Image 6">
+            <img class="imgcourse" src="{{ url_for('static', filename='courses_png/arts.jpg')}}" alt="Image 1">
+            <img class="imgcourse" src="{{ url_for('static', filename='courses_png/chemistry.jpg')}}" alt="Image 2">
+            <img class="imgcourse" src="{{ url_for('static', filename='courses_png/electronics.jpg')}}" alt="Image 3">
+            <img class="imgcourse" src="{{ url_for('static', filename='courses_png/hvpe.jpg')}}" alt="Image 4">
+            <img class="imgcourse" src="{{ url_for('static', filename='courses_png/maths.jpg')}}" alt="Image 5">
+            <img class="imgcourse" src="{{ url_for('static', filename='courses_png/mechanics.jpg')}}" alt="Image 6">
             
-            <img class="imgcourse" id ="plus" src="plus.png" alt="Image 6">
+            <img class="imgcourse" id ="plus" src="{{ url_for('static', filename='plus.png')}}" alt="Image 6">
         </div>
     </div>
     </section>

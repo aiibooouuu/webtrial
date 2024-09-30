@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>loginstd</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='signinstd.css')}}">
+  <link rel="icon" href="{{url_for('static', filename='webicon.png')}}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<section>
+    {% for _ in range(count) %}
+      <span class='box'></span>
+    {% endfor %}
+</section>
+
+<!-- Your login form section -->
+<section>
+  <form method='POST' action='' class='center-content'>
+    {{ form.hidden_tag() }}
+    {% block login_content %}{% endblock login_content %}
+  </form>
+</section>
+<!-- partial -->
+  
+</body>
+</html>

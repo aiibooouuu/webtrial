@@ -1,0 +1,108 @@
+{% extends 'login-layout.html'%}
+{% block login_content %}
+<div class="signin">
+    <div class="content">
+      <h2>Register as an Instructor</h2>
+      <div class="form">
+      <div class="inputBox">
+        {% if form.username.errors %}
+          {{ form.username(class="form-control is-invalid", placeholder="") }}
+          <i>Username 👤</i>
+          <div class='error-message'>
+            {% for error in form.username.errors%}
+              <span>{{ error }}</span>
+            {% endfor%}
+          </div>
+        {% else %}
+          {{ form.username(class='form-control')}}
+          <i>Username 👤</i> 
+        {% endif%}
+      </div>
+      <div class="form">
+        <div class="inputBox">
+          {% if form.email.errors %}
+            {{ form.email(class="form-control is-invalid", placeholder="") }}
+            <i>Email 👤</i>
+            <div class='error-message'>
+              {% for error in form.email.errors%}
+                <span>{{ error }}</span>
+              {% endfor%}
+            </div>
+          {% else %}
+            {{ form.email(class='form-control')}}
+            <i>Email 👤</i> 
+          {% endif%}
+        </div>
+        <div class="inputBox">
+          {% if form.password.errors %}
+            {{ form.password(class='form-control is-invalid')}}
+            <i>Password  🔒</i>
+            <div class='error-message'>
+              {% for error in form.password.errors %}
+                <span>{{ error }}</span>
+              {% endfor %}
+            </div>
+          {% else %}
+            {{ form.password(class='form-control')}}
+            <i>Password  🔒</i>
+          {% endif %}
+        </div>
+        <div class="inputBox">
+            {% if form.confirm_password.errors %}
+            {{ form.confirm_password(class='form-control is-invalid')}}
+            <i>Confirm Password  🔒</i>
+            <div class='error-message'>
+              {% for error in form.confirm_password.errors %}
+                <span>{{ error }}</span>
+              {% endfor %}
+            </div>
+          {% else %}
+            {{ form.confirm_password(class='form-control')}}
+            <i>Confirm Password  🔒</i>
+          {% endif %}
+        </div>
+        <!--This is the section for the flash messages-->
+                <!-- to copyyyyy-->
+        <!--Flash messages section-->
+        <div class="flash-messages">
+          {% with messages = get_flashed_messages(with_categories=true) %}
+              {% if messages %}
+                  {% for category, message in messages %}
+                      <div class="flash-message alert alert-{{ category }} alert-dismissible fade show">
+                          {{ message }}
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                          </button>
+                      </div>
+                  {% endfor %}
+              {% endif %}
+          {% endwith %}
+        </div>
+
+        <!-- Script file for autodismiss of flash messages -->
+        <script>
+          // Automatically dismiss flash messages after 5 seconds
+          setTimeout(function() {
+              let alerts = document.querySelectorAll('.flash-message');
+              alerts.forEach(function(alert) {
+                  alert.classList.add('fade');
+                  setTimeout(function() {
+                      alert.style.display = 'none';
+                  }, 500);  // Allow time for fade-out effect
+              });
+          }, 5000);  // Dismiss after 5 seconds
+        </script>
+
+        <!-- to copyyyy-->
+      
+  
+        <div class="links">
+          <a href="{{ url_for('auth.login_student')}}">Login Instead</a>
+        </div>
+        <div class="inputBox">
+          {{ form.submit(class='btn')}}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock login_content%}

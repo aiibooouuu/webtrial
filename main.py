@@ -11,8 +11,9 @@ from website import create_app
 #   "databaseURL": ""
 # }
 
-# firebase = pyrebase.initialize_app(firebaseConfig)
+# firebase pip= pyrebase.initialize_app(firebaseConfig)
 # auth = firebase.auth()
+
 
 
 app = create_app()

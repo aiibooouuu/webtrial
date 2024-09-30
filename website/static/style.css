@@ -24,8 +24,15 @@ html{
 }
 
 body{
-    background: var(--bg-color);
+    background-image:     
+    repeating-linear-gradient(to right, transparent 0 50px, rgba(255, 255, 255, 0.1) 50px 51px),    
+    repeating-linear-gradient(to bottom, transparent 0 50px, rgba(255, 255, 255, 0.1) 50px 51px);
+    background-color-image:     
+    repeating-linear-gradient(to right, transparent 0 50px, rgba(255, 255, 255, 0.1) 50px 51px),    
+    repeating-linear-gradient(to bottom, transparent 0 50px, rgba(255, 255, 255, 0.1) 50px 51px);
+    background-color: var(--bg-color);
     color: var(--text-color);
+
 }
 
 .header{
@@ -126,23 +133,23 @@ span{
 }
 
 .home-img{
-    border-radius: 50%;
+    /* border-radius: 50%; */
 }
 
 .home-img img{
     position: relative;
     top: 3rem;
     width: 32vw;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     box-shadow: 0 0 25 var(--main-color);
     cursor: pointer;
     transition: 0.4s ease-in-out;
 }
 
 .home-img img:hover{
-    box-shadow: 0 0 25px var(--main-color),
+    /* box-shadow: 0 0 25px var(--main-color),
                 0 0 50px var(--main-color),
-                0 0 100px var(--main-color);
+                0 0 100px var(--main-color); */
 }
 
 .home-content p{
@@ -252,7 +259,7 @@ span{
 @keyframes words{
     0%,
     20%{
-        content: "Accountant";
+        content: "Doctor";
     }
     21%,
     40%{
@@ -260,15 +267,15 @@ span{
     }
     41%,
     60%{
-        content: "Musician";
+        content: "Entrepeneur";
     }
     61%,
     80%{
-        content: "Entrepeneur";
+        content: "Musician";
     }
     81%,
     100%{
-        content: "Artist";
+        content: "Lawyer";
     }
 }
 
@@ -309,6 +316,10 @@ span{
 .education{
     padding: 100px 15px;
     background: var(--second-bg-color);
+    background-image:     
+    repeating-linear-gradient(to right, transparent 0 50px, rgba(255, 255, 255, 0.1) 50px 51px),    
+    repeating-linear-gradient(to bottom, transparent 0 50px, rgba(255, 255, 255, 0.1) 50px 51px);
+    
 }
 
 .education h2{
@@ -378,6 +389,16 @@ span{
     box-shadow: 0 0 10px var(--main-color);
     cursor: pointer;
     transition: 0.3s ease-in-out;
+    height: 300px;
+    width: 550px;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    text-align: left;
+}
+
+.timeline-content::-webkit-scrollbar{
+    width: 100%;
+    height: 100%;
 }
 
 .timeline-content:hover{
@@ -419,6 +440,10 @@ span{
 .services{
     background: var(--bg-color);
     color: black;
+    background-image:     
+    repeating-linear-gradient(to right, transparent 0 50px, rgba(255, 255, 255, 0.1) 50px 51px),    
+    repeating-linear-gradient(to bottom, transparent 0 50px, rgba(255, 255, 255, 0.1) 50px 51px);
+    
 }
 
 .services h2{
@@ -440,12 +465,17 @@ span{
     border: 5px solid transparent;
     cursor: pointer;
     transition: 0.3s ease-in-out;
-    
-    
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+
+.service-box::-webkit-scrollbar{
+    width: 100%;
+    height: 100%;
 }
 
 .service-box:hover{
-    background: white;
+    background: #69fff5;
     color: black;
     border: 5px solid transparent var(--main-color);
     transform: scale(1.03);
@@ -463,9 +493,9 @@ span{
 }
 
 .service-info h4{
-   font-size: 3rem; 
-   font-weight: 800;
-   line-height: 2;
+    font-size: 3rem; 
+    font-weight: 800;
+    line-height: 2;
 }
 
 .service-info p{
@@ -478,6 +508,10 @@ span{
 
 .testimonials{
     background: var(--second-bg-color);
+    background-image:     
+    repeating-linear-gradient(to right, transparent 0 50px, rgba(255, 255, 255, 0.1) 50px 51px),    
+    repeating-linear-gradient(to bottom, transparent 0 50px, rgba(255, 255, 255, 0.1) 50px 51px);
+    
 }
 
 .testimonials-box{
@@ -542,4 +576,115 @@ span{
 #star{
     color: gold;
     font-size: 2rem;
+}
+
+#astar{
+    font-size: 2rem;
+}
+
+.testimonials-item .star{
+    font-size: 2rem;
+}
+
+.testimonials-item #astar{
+    font-size: 2rem;
+}
+
+@media(max-width:1285px){
+    html{
+        font-size: 55%;
+    }
+    .services-container{
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(2,1fr);
+        margin: 0.5rem;
+    }
+}
+
+@media(max-width:991px){
+    header{
+        padding: 2rem 3%;
+    }
+    section{
+        padding: 10rem 3% 2rem;
+    }
+    .timeline-items::before{
+        left: 7px;
+    }
+    .timeline-item:nth-child(odd){
+        padding-right: 0;
+        text-align: left;
+    }
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even){
+        padding-left: 37px;
+    }
+    .timeline-dot{
+        left: 0;
+    }
+    .services{
+        padding-bottom: 7rem;
+    }
+    .testimonials .wrapper{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .contact form{
+        flex-direction: column;
+    }
+    .footer{
+        padding: 2rem 3%;
+    }
+}
+@media(max-width:895px){
+    #menu-icons{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top:100%;
+        right: 0%;
+        width: 50%;
+        padding: 1rem 3%;
+        background: rgba(0,0,0,0.8);
+        backdrop-filter: blur(20px);
+        border-bottom-left-radius: 2rem;
+        border-left: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+        display: none;
+    }
+    .navbar.active{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem;
+    }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem;
+        color: white;
+    }
+    .home{
+        flex-direction: column-reverse;
+        margin: 5rem 4rem;
+    }
+    .home-content h3{
+        font-size: 2.6rem;
+    }
+    .home-content h1{
+        font-size: 8rem;
+        margin-top: 3rem;
+    }
+    .home-content p{
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .home-img img{
+        width: 56vw;
+    }
+    .services h2{
+        margin-bottom: 3rem;
+    }
+    .services-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
