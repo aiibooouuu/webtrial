@@ -1,14 +1,28 @@
-from flask import Blueprint, render_template, url_for
+from flask import Blueprint, render_template, session, flash
+from website.forms import RegistrationForm, LoginForm
+from website.models import User
+from datetime import datetime
 
 views = Blueprint('views', __name__)
 
 @views.route('/')
 def home():
+    session.pop('usre_id', None)
+    flash('You have been logged out due to navigation', 'danger')
     return render_template("home.html")
 
 @views.route('/student-dashboard')
 def std_dashboard():
-    return render_template('student-dashboard.html', title="Welcome Student")
+    user_id = session.get('user_id')  # Fetch user ID from session
+    user = User.query.get(user_id) 
+    # remind me to add datetime functionality                                    
+    # Get user from the database
+    
+    if user:
+        user_email = user.email
+    else:
+        user_email = "User not found"
+    return render_template('student-dashboard.html', title="Welcome Student", user_email=user_email)
 
 @views.route('/instructor-dashboard')
 def inst_dashboard():
@@ -21,3 +35,7 @@ def student_courses():
 @views.route('/student-mentors')
 def student_mentors():
     return render_template('student-mentors.html', title="Student Mentors")
+
+@views.route('/student-roadmap')
+def student_roadmap():
+    return render_template('roadmap_html/index.html', title='Roadmap')

@@ -8,6 +8,7 @@
         <title>Tick My Way - {{title}}</title>
     {% else %}
         <title>Tick My Way</title>
+        <link rel="icon" href="{{url_for('static', filename='money.png')}}">
     {% endif %}
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -20,10 +21,10 @@
         <i class='bx bx-menu' id="menu-icon"></i>
         <nav class="navbar">
             <a href="/" class="active">HOME</a>
-            <a href="#education" >EDUCATION</a>
+            <a href="#education" >PATHWAY</a>
             <a href="#services" >SERVICES</a>
-            <a href="#testimonials">TESTIMONIALS</a>
-            <a href="#contact" >CONTACT</a>
+            <a href="#testimonials">MENTOR</a>
+            <!-- <a href="#contact" >CONTACT</a> -->
         </nav>
     </header>
     {% block content %}{% endblock content%}
