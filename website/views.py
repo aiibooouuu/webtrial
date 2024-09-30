@@ -1,17 +1,22 @@
-from flask import Blueprint, render_template, session
+from flask import Blueprint, render_template, session, flash
 from website.forms import RegistrationForm, LoginForm
 from website.models import User
+from datetime import datetime
 
 views = Blueprint('views', __name__)
 
 @views.route('/')
 def home():
+    session.pop('usre_id', None)
+    flash('You have been logged out due to navigation', 'danger')
     return render_template("home.html")
 
 @views.route('/student-dashboard')
 def std_dashboard():
     user_id = session.get('user_id')  # Fetch user ID from session
-    user = User.query.get(user_id)     # Get user from the database
+    user = User.query.get(user_id) 
+    # remind me to add datetime functionality                                    
+    # Get user from the database
     
     if user:
         user_email = user.email
