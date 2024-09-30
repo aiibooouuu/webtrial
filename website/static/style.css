@@ -578,3 +578,11 @@ span{
 #astar{
     font-size: 2rem;
 }
+
+.testimonials-item .star{
+    font-size: 2rem;
+}
+
+.testimonials-item #astar{
+    font-size: 2rem;
+}
