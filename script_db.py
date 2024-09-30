@@ -1,5 +1,5 @@
 from website import create_app, db
-from website.models import User  # Import your models
+from website.models import User , Instructor # Import your models
 
 app = create_app()
 
@@ -9,4 +9,4 @@ with app.app_context():
     #new_user = User(email='andredsouza256@gmail.com', password='Welcomegaga@238', username='PippyUrkel')
     #db.session.add(new_user)
     #db.session.commit()
-    print(User.query.all())
+    print(Instructor.query.all())

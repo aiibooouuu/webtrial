@@ -233,30 +233,17 @@ input[type="submit"]:active {
 }
 
 /* flash messages code */
-/* Flash message container */
-.flash-messages {
-  margin-top: 10px;  /* Adds space between the "Confirm Password" and the messages */
-}
-
-/* Flash message styling */
-/* Flash message container */
-.flash-messages {
-  margin-top: 10px;  /* Adds space between the "Confirm Password" and the messages */
-  display: flex;      /* Use flex to center the messages */
-  justify-content: center; /* Centering flash messages */
-}
-
 /* Flash message styling */
 .flash-message {
-  padding: 20px 25px;  /* Increased padding for a larger box */
-  border-radius: 12px;  /* More rounded corners */
+  padding: 20px 25px;
+  border-radius: 12px;
   margin-bottom: 10px;
   font-size: 14px;
   text-align: center;
   opacity: 0.9;
   transition: opacity 0.5s ease-in-out;
-  min-width: 300px;    /* Minimum width to ensure the message box isn't too small */
-  max-width: 80%;      /* Maximum width to keep it responsive */
+  min-width: 300px;
+  max-width: 80%;
 }
 
 /* Success message */
@@ -271,9 +258,4 @@ input[type="submit"]:active {
   background-color: #f8d7da;
   color: #721c24;
   border: 1px solid #f5c6cb;
-}
-
-/* Optional: make the flash message fade out after 5 seconds */
-.flash-message.fadeout {
-  opacity: 0;
 }

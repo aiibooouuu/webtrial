@@ -32,17 +32,39 @@
             <i>Password  🔒</i>
           {% endif %}
         </div>
+        <!-- to copyyyyy-->
+        <!--Flash messages section-->
         <div class="flash-messages">
           {% with messages = get_flashed_messages(with_categories=true) %}
-            {% if messages %}
-              <ul>
-                {% for category, message in messages %}
-                  <li class="alert alert-{{ category }}">{{ message }}</li>
-                {% endfor %}
-              </ul>
-            {% endif %}
+              {% if messages %}
+                  {% for category, message in messages %}
+                      <div class="flash-message alert alert-{{ category }} alert-dismissible fade show">
+                          {{ message }}
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                          </button>
+                      </div>
+                  {% endfor %}
+              {% endif %}
           {% endwith %}
         </div>
+
+        <!-- Script file for autodismiss of flash messages -->
+        <script>
+          // Automatically dismiss flash messages after 5 seconds
+          setTimeout(function() {
+              let alerts = document.querySelectorAll('.flash-message');
+              alerts.forEach(function(alert) {
+                  alert.classList.add('fade');
+                  setTimeout(function() {
+                      alert.style.display = 'none';
+                  }, 500);  // Allow time for fade-out effect
+              });
+          }, 5000);  // Dismiss after 5 seconds
+        </script>
+
+        <!-- to copyyyy-->
+
         <div class="links">
           <a href="#">Forgot Password</a>
           <a href="{{ url_for('auth.register_student')}}">Register</a>
