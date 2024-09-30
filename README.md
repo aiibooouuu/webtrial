@@ -3,10 +3,13 @@
 
 ## Overview
 
-This project is designed to [brief description of your project]. It provides features such as:
-- Feature 1
-- Feature 2
-- Feature 3
+This project is designed to create an intuitive and interactive platform for educational content delivery and management. The core features include:
+
+1. Dynamic Roadmap Feature: This allows students to follow a personalized learning path with a progress tracking system. The roadmap provides a visual structure for courses, enabling users to tick off milestones as they advance through their learning objectives. Instructors can easily build and adjust these roadmaps for different use cases.
+
+2. Gamified Experience: The platform incorporates a gamification layer that introduces a premium currency system. Users can earn currency based on course progress, which can then be used to unlock profile customizations and other engaging features, enhancing motivation and interaction.
+
+3. User-Friendly UI/UX: The interface is designed to be intuitive and responsive, catering to both students and instructors. It simplifies the process of course creation and management while offering a seamless user experience for students to navigate through their learning paths.
 
 ## Table of Contents
 - [Overview](#overview)
@@ -23,12 +26,12 @@ To get started with this project, follow the instructions below:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
+   git clone https://github.com/aiibooouuu/webtrial.git    
    ```
 
 2. Navigate into the project directory:
    ```bash
-   cd your-repo-name
+   cd webtrial
    ```
 
 3. Install the required dependencies:
