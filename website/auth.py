@@ -32,23 +32,24 @@ def logout():
 @auth.route('/register-student', methods=['POST', 'GET'])
 def register_student():
     form = RegistrationForm()
-    print(form.email.data)
-    print(form.password.data)
-    print(form.confirm_password.data)
-    print(f'The form validated for registration : {form.validate_on_submit()}')
     if form.validate_on_submit():
-        new_user = User(email=form.email.data, password=form.password.data)
+        new_user = User(username=form.username.data, email=form.email.data, password=form.password.data)
         try:
             db.session.add(new_user)
             db.session.commit()
-            return redirect(url_for('views.std_dashboard'))
+            
+            # Save user_id in session after successful registration
+            session['user_id'] = new_user.id
+
             flash('Account Created Successfully', 'success')
+            return redirect(url_for('views.std_dashboard'))
         except Exception as e:
             db.session.rollback()  # Rollback the session on error
             print(f"Error occurred: {e}") 
             flash('An error occurred. Please try again.', 'danger')
-
+    
     return render_template('student-registration.html', count=128, form=form)
+
 
 @auth.route('/login-instructor', methods=['POST', 'GET'])
 def login_instructor():
@@ -57,4 +58,12 @@ def login_instructor():
         return redirect(url_for('views.inst_dashboard'))
 
     return render_template('instructor-login.html', count=128, form=form)
+
+@auth.route('/register-instructor', methods=['POST','GET'])
+def register_instructor():
+    form = RegistrationForm()
+    if form.validate_on_submit():
+        return redirect(url_for('views.inst_dashboard'))
+    
+    return render_template('instructor-registration.html', count=128, form=form)
 
