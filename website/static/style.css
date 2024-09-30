@@ -654,4 +654,34 @@ span{
         font-size: 2rem;
         margin: 3rem;
     }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem;
+        color: white;
+    }
+    .home{
+        flex-direction: column-reverse;
+        margin: 5rem 4rem;
+    }
+    .home-content h3{
+        font-size: 2.6rem;
+    }
+    .home-content h1{
+        font-size: 8rem;
+        margin-top: 3rem;
+    }
+    .home-content p{
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .home-img img{
+        width: 56vw;
+    }
+    .services h2{
+        margin-bottom: 3rem;
+    }
+    .services-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
