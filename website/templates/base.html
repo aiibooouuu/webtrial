@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{url_for('static', filename='webicon.png')}}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
     {% block css %}{% endblock css %}
     {% if title %}
         <title>Tick My Way - {{title}}</title>
@@ -18,7 +20,7 @@
             <span>WAY</span>
         </a>
     
-        <i class='bx bx-menu' id="menu-icon"></i>
+        
         <nav class="navbar">
             <a href="/" class="active">HOME</a>
             <a href="#education" >PATHWAY</a>

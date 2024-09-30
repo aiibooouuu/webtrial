@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block css %}
     <link rel="stylesheet" href="{{url_for('static', filename='stddashboard.css')}}">
+    <link rel="icon" href="{{url_for('static', filename='webicon.png')}}">
 {% endblock css %}
 {% block content %}
     <br><br><br><br><br><br><br><br><br><br><br><br>
@@ -15,11 +16,17 @@
         </div>
         <div class="image-section">
             <img src="{{ url_for('static', filename='pfp.jpg')}}" alt="Profile Image">
+            <img src="{{ url_for('static', filename='pfp.jpg')}}" alt="Profile Image">
         </div>
         <form action="{{ url_for('auth.logout') }}" method="post" style="display:inline;">
             <a href="{{ url_for('auth.logout') }}" class="btn-logout">Logout</a>
         </form>
+        <form action="{{ url_for('auth.logout') }}" method="post" style="display:inline;">
+            <a href="{{ url_for('auth.logout') }}" class="btn-logout">Logout</a>
+        </form>
     </div>
+    <!-- Logout Button -->
+    
     <!-- Logout Button -->
     
 
@@ -40,6 +47,10 @@
         </div>
 
         <div class="small">
+            <a href="{{url_for('views.student_roadmap')}}" style="text-decoration: none; color: inherit;">
+                <h3>Roadmap</h3>
+                <p class="info">Click here to find roadmaps of people who achieved the same dream as yours</p>
+            </a>
             <a href="{{url_for('views.student_roadmap')}}" style="text-decoration: none; color: inherit;">
                 <h3>Roadmap</h3>
                 <p class="info">Click here to find roadmaps of people who achieved the same dream as yours</p>
@@ -249,35 +260,42 @@
                     <div class="progresselmnt1">
                         <div class="progress-container1">
                             Mechanics <br>
+                            Mechanics <br>
                             <progress id="progress-bar1" value="40" max="100" ></progress>
                         </div>
         
                         <div class="progress-container1">
+                            Human Values and Ethics <br>
                             Human Values and Ethics <br>
                             <progress id="progress-bar2" value="70" max="100" ></progress>
                         </div>
         
                         <div class="progress-container1">
                             Mathematics <br>
+                            Mathematics <br>
                             <progress id="progress-bar3" value="10" max="100" ></progress>
                         </div>
         
                         <div class="progress-container1">
+                            Chemistry <br>
                             Chemistry <br>
                             <progress id="progress-bar4" value="20" max="100" ></progress>
                         </div>
         
                         <div class="progress-container1">
                             Physics <br>
+                            Physics <br>
                             <progress id="progress-bar5" value="90" max="100" ></progress>
                         </div>
         
                         <div class="progress-container1">
                             Arts <br>
+                            Arts <br>
                             <progress id="progress-bar6" value="55" max="100" ></progress>
                         </div>
         
                         <div class="progress-container1">
+                            Electronics <br>
                             Electronics <br>
                             <progress id="progress-bar7" value="40" max="100" ></progress>
                         </div>
@@ -312,17 +330,44 @@
         </div>
     </section>
     <!--SECTION 2-->
+    <!-- SECTION 1 -->
     <section class="instructor-part">
         <div class="comment-post">
             <div class="top">
                 <div class="profile-pic"><img src="" alt="pfp" ></div>
                 <div class="instructor-details">
+                    <h3>Prof. Danish Zehen</h3>
+                    <p>MATHEMATICS SEM 3</p>
+                </div>
+            </div>
+            <div class="comment-content">
+                <p>
+                            Prof. Danish Zehen Posted New Material 'practice_sheet_1.pdf'
+                </p>
+            </div>
+            <div class="comment-box">
+                <div class="profile-pic-small"></div>
+                <div class="addcmnt"><input type="text" placeholder="ADD A COMMENT"></div>
+                <div class="btn"><button class="send-button">&#10148;</button></div>
+            </div>
+        </div>
+    </section>
+    <!--SECTION 2-->
+    <section class="instructor-part">
+        <div class="comment-post">
+            <div class="top">
+                <div class="profile-pic"><img src="" alt="pfp" ></div>
+                <div class="profile-pic"><img src="" alt="pfp" ></div>
+                <div class="instructor-details">
+                    <h3>CA. Divya Subramanyum</h3>
+                    <p>ELECTRONICS</p>
                     <h3>CA. Divya Subramanyum</h3>
                     <p>ELECTRONICS</p>
                 </div>
             </div>
             <div class="comment-content">
                 <p>
+                    Reminder for Semester 2 quiz on '23-09-2024'
                     Reminder for Semester 2 quiz on '23-09-2024'
                 </p>
             </div>

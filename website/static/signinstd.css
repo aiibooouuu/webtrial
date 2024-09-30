@@ -232,30 +232,32 @@ input[type="submit"]:active {
   height: 100%; /* Ensure the form takes full height */
 }
 
-/* flash messages code */
-/* Flash message styling */
-.flash-message {
-  padding: 20px 25px;
-  border-radius: 12px;
-  margin-bottom: 10px;
-  font-size: 14px;
-  text-align: center;
-  opacity: 0.9;
-  transition: opacity 0.5s ease-in-out;
-  min-width: 300px;
-  max-width: 80%;
+/* Flash Messages Section */
+.flash-messages {
+  margin-top: 10px; /* Adjust spacing as needed */
+  width: 100%; /* Make sure it takes full width of the form */
 }
 
-/* Success message */
+.flash-messages ul {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+}
+
+.flash-messages .alert {
+  padding: 15px;
+  margin-bottom: 10px; /* Spacing between messages */
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
 .alert-success {
   background-color: #d4edda;
   color: #155724;
-  border: 1px solid #c3e6cb;
 }
 
-/* Error message */
 .alert-danger {
   background-color: #f8d7da;
   color: #721c24;
-  border: 1px solid #f5c6cb;
 }
